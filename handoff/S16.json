@@ -1,0 +1,103 @@
+{
+  "shot": "S16",
+  "act": "C",
+  "act_name": "黑城",
+  "slug": "电台",
+  "start_sec": 70.0,
+  "duration_sec": 5.0,
+  "size": "近景",
+  "lens": "50mm",
+  "location": "继电器柜",
+  "chars": [
+    "CHEN"
+  ],
+  "desc": "他抓起对讲机，手指发抖；电台说只有你能做。",
+  "dialogue": [
+    {
+      "speaker": "老周 电台",
+      "zh": "小陈，手动重启，只有你能做。",
+      "en": "Xiao Chen, manual reboot. Only you can do it.",
+      "in_shot_at": 0.4,
+      "placed_at": 0.4,
+      "placed_dur": 2.53,
+      "placed_text": "小陈，手动重启，只有你能做。"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "我过去。",
+      "en": "I'm on my way.",
+      "in_shot_at": 3.3,
+      "placed_at": 3.3,
+      "placed_dur": 0.68,
+      "placed_text": "我过去。"
+    }
+  ],
+  "camera": {
+    "move": "轻微手持",
+    "motivation": "手抖是表演，镜头要近而不稳",
+    "recipe": "轻微手持（幅度小），跟随他抓起对讲机，不推拉",
+    "scale_device": "无",
+    "execution_path": "纯提示词",
+    "end_state": "对讲机贴到嘴边，PTT 按下",
+    "fallback": "固定 + 只拍手与对讲机特写",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "对讲机按键、雨、电流。",
+    "music": "Cue 2 黑城",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "不做唇形：对白按画外处理，只给眼神/呼吸/手部动作（全片默认策略）",
+    "audio_track": "S16_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "陈默服装：深藏蓝工装夹克 + 两条银色反光条 + 深色衬衫 + 牛皮绳挂单把黄铜钥匙（锁骨下方）",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "画面事实（本镜）：他抓起对讲机，手指发抖；电台说只有你能做。"
+  ],
+  "reference_images": [
+    "REF/FACE_CHEN_S11.png",
+    "REF/SCENE_CABINET.png",
+    "REF/char_chenmo_ref.png"
+  ],
+  "continuity_locks": null,
+  "first_frame": {
+    "file": "S16_frame.png",
+    "source": "clip S16_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "对讲机贴到嘴边，PTT 按下",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。陈默：中国男性，46岁，清瘦饱经风霜的脸，深陷疲惫的眼睛，花白寸头，短灰胡须与下巴山羊胡，右颊一道很浅的旧疤，深藏青色反光雨衣配银色安全条，炭灰色工作衬衫，脖子上用旧皮绳挂一把黄铜钥匙。必须与参考图完全同一张脸、同一套衣服。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。陈默抓起对讲机，雨水，红色屏幕光，下颌绷紧，背景是失焦的黑城，实用光，急迫，近景。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. CHEN MO: Chinese man, 46, lean weathered face, deep-set tired eyes, short salt-and-pepper buzz cut, short gray mustache and goatee, a faint old scar on his right cheek, dark navy reflective raincoat with silver safety stripes, charcoal work shirt, a brass key on a worn leather cord around his neck. Match the reference image exactly: same face, same wardrobe. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. medium close-up of Chen Mo grabbing a two-way radio, rain, red screen light, his jaw tight, the blacked-out city out of focus behind him, practical light, urgency. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。轻微手持近景，他抓起对讲机，按下按键，呼吸急促，背景雨与黑暗，5秒。 结束状态：对讲机贴到嘴边，PTT 按下 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. slight handheld medium close-up, he grabs the radio and presses the button, breathing hard, rain and darkness behind, 5 seconds. End state: 对讲机贴到嘴边，PTT 按下 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "shot": "S32",
+  "act": "E",
+  "act_name": "旧继电器",
+  "slug": "空屋",
+  "start_sec": 146.0,
+  "duration_sec": 6.0,
+  "size": "记忆特写",
+  "lens": "50mm",
+  "location": "记忆·旧公寓",
+  "chars": [],
+  "desc": "行李箱、倒扣的结婚照、摊开的预约单与笔。",
+  "dialogue": [
+    {
+      "speaker": "陈默 画外",
+      "zh": "我也没转。",
+      "en": "Neither did I.",
+      "in_shot_at": 0.2,
+      "placed_at": 0.44,
+      "placed_dur": 0.84,
+      "placed_text": "我也没转。"
+    },
+    {
+      "speaker": "林曦 VO",
+      "zh": "那天我说，你守着这座城，像守着一个不会回话的人。",
+      "en": "I said you guarded this city like someone who'd never answer.",
+      "in_shot_at": 1.3,
+      "placed_at": 1.42,
+      "placed_dur": 3.35,
+      "placed_text": "那天我说，你守着这座城，像守着一个不会回话的人。"
+    },
+    {
+      "speaker": "陈默 画外",
+      "zh": "城不会走。",
+      "en": "Cities don't leave.",
+      "in_shot_at": 4.5,
+      "placed_at": 4.91,
+      "placed_dur": 0.86,
+      "placed_text": "城不会走。"
+    },
+    {
+      "speaker": "林曦 VO",
+      "zh": "我会。",
+      "en": "I did.",
+      "in_shot_at": 5.4,
+      "placed_at": 5.91,
+      "placed_dur": 0.54,
+      "placed_text": "我会。"
+    }
+  ],
+  "camera": {
+    "move": "缓慢横移",
+    "motivation": "空房间要“扫过”才显出缺席",
+    "recipe": "6 秒匀速横移（trucking），行李箱 → 倒扣结婚照 → 摊开的预约单",
+    "scale_device": "前景遮挡（门框）+ 尺度对比",
+    "execution_path": "参考视频迁移 或 首尾帧",
+    "end_state": "停在预约单上（文字后期贴 G11）",
+    "fallback": "切三个静帧 + 声音桥",
+    "frame_pairing": "需 END 帧"
+  },
+  "sound": {
+    "sfx": "雨声变闷、钟表轻响。",
+    "music": "Cue 4 旧继电器",
+    "transition": "叠化"
+  },
+  "lipsync": {
+    "policy": "不做唇形：对白按画外处理，只给眼神/呼吸/手部动作（全片默认策略）",
+    "audio_track": "S32_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [
+    {
+      "plate": "OVERLAY/G11_appointment_0900.png",
+      "when": "落幅",
+      "how": "全片最重要的可读道具；与 S07/S40/S41 同一张，只改褶皱与压痕"
+    }
+  ],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "回忆规则：18 年前只拍背影/伞/围巾/物件，禁止生成年轻版正脸",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "道具：行李箱",
+    "道具：倒扣结婚照",
+    "道具：预约单",
+    "不可变：横移方向自左向右",
+    "不可变：结婚照只给背面/虚焦",
+    "不可变：预约单文字用 G11",
+    "不可变：窗外冷蓝为唯一光源"
+  ],
+  "reference_images": [
+    "REF/PROP_PHOTO.png",
+    "REF/PROP_SLIP.png",
+    "REF/SCENE_MEMORY_HOME.png"
+  ],
+  "continuity_locks": {
+    "shot_id": "S32",
+    "character": [],
+    "location": [
+      "MEMORY_HOME"
+    ],
+    "props": [
+      "行李箱",
+      "倒扣结婚照",
+      "预约单"
+    ],
+    "must_not_change": [
+      "横移方向自左向右",
+      "结婚照只给背面/虚焦",
+      "预约单文字用 G11",
+      "窗外冷蓝为唯一光源"
+    ]
+  },
+  "first_frame": {
+    "file": "S32_frame.png",
+    "source": "clip S32_FINAL.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": "S32_end.png",
+    "state": "停在预约单上（文字后期贴 G11）",
+    "note": "横移落幅：停在摊开的复婚预约单 09:00 上",
+    "method": "plate"
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。旧公寓的客厅，夜：门口一只打包好的行李箱，书架上倒扣的结婚照，桌上摊开的预约单与一支笔，窗外雨，冷蓝，无人。记忆，旧公寓客厅夜景，缓慢横移：门口一只打包好的行李箱，书架上倒扣的结婚照，桌上摊开的预约单和一支笔，窗外雨，冷蓝，无人，克制的空。【重做硬性要求】摊开的本子与散页纸面一律空白：无手写、无印刷字符，文字由后期合成。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. the living room of an old apartment at night: a packed suitcase by the door, a face-down wedding photo on the shelf, an open appointment paper and a pen on the table, rain outside the window, cold blue, no people. memory shot of an old apartment living room at night, slow lateral move: a packed suitcase by the door, a face-down wedding photo on the shelf, an open appointment paper and a pen on the table, rain outside the window, cold blue, no people, restrained emptiness. The open booklet and the loose papers are BLANK — no handwriting, no printed characters; documents are added in post. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。缓慢横移，依次经过行李箱、倒扣的相框、预约单与笔，窗外雨流动，无人，6秒。【重做硬性要求】摊开的本子与散页纸面一律空白：无手写、无印刷字符，文字由后期合成。 结束状态：停在预约单上（文字后期贴 G11） 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. slow lateral move past the suitcase, the face-down frame, the paper and pen, rain moving outside the window, no people, 6 seconds. The open booklet and the loose papers are BLANK — no handwriting, no printed characters; documents are added in post. End state: 停在预约单上（文字后期贴 G11） NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

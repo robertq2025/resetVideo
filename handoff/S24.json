@@ -1,0 +1,132 @@
+{
+  "shot": "S24",
+  "act": "D",
+  "act_name": "同路人",
+  "slug": "两种记录",
+  "start_sec": 107.0,
+  "duration_sec": 4.0,
+  "size": "特写",
+  "lens": "100mm macro",
+  "location": "继电器柜",
+  "chars": [],
+  "desc": "平板错误日志 vs 手写日志本，同是047。",
+  "dialogue": [
+    {
+      "speaker": "林曦",
+      "zh": "你还用手写？",
+      "en": "You still write by hand?",
+      "in_shot_at": 0.3,
+      "placed_at": 0.3,
+      "placed_dur": 1.09,
+      "placed_text": "你还用手写？"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "机器不记的事，我记。",
+      "en": "Machines don't remember. I do.",
+      "in_shot_at": 2.0,
+      "placed_at": 2.0,
+      "placed_dur": 1.97,
+      "placed_text": "机器不记的事，我记。"
+    }
+  ],
+  "camera": {
+    "move": "固定，变焦",
+    "motivation": "主题视觉化：机器 vs 手，用焦点切换做对比",
+    "recipe": "起幅平板日志，1.5 秒 rack focus 到后面手写本，再 1.5 秒焦点回拉",
+    "scale_device": "无",
+    "execution_path": "纯提示词（后期拉焦点更稳）",
+    "end_state": "焦点落回手写本",
+    "fallback": "切两镜 + 匹配剪辑",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "雨、平板提示音。",
+    "music": "Cue 3 同路人",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "手部/物件镜头，全部画外",
+    "audio_track": "S24_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [
+    {
+      "plate": "OVERLAY/G07_tablet_log047.png",
+      "when": "全程",
+      "how": "平板屏，按手持角度旋转 4–7°，亮度 80%"
+    },
+    {
+      "plate": "OVERLAY/G08_handwrite_047.png",
+      "when": "全程",
+      "how": "手写记录贴柜门，与平板左右同框构成两种记录对比"
+    }
+  ],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "道具：加固平板",
+    "道具：值班日志",
+    "不可变：平板在右、纸本在左",
+    "不可变：屏幕文字用 G07，纸面用 G08",
+    "不可变：焦点在两者间切换"
+  ],
+  "reference_images": [
+    "REF/PROP_LOG.png",
+    "REF/PROP_TABLET.png",
+    "REF/SCENE_CABINET.png",
+    "REF/char_chenmo_ref.png",
+    "REF/char_linxi_ref.png"
+  ],
+  "continuity_locks": {
+    "shot_id": "S24",
+    "character": [],
+    "location": [
+      "CABINET"
+    ],
+    "props": [
+      "加固平板",
+      "值班日志"
+    ],
+    "must_not_change": [
+      "平板在右、纸本在左",
+      "屏幕文字用 G07，纸面用 G08",
+      "焦点在两者间切换"
+    ]
+  },
+  "first_frame": {
+    "file": "S24_frame.png",
+    "source": "clip S24_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "焦点落回手写本",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。特写，平板屏幕上的抽象错误日志（无可读文字）与旁边磨损的手写日志本，同一页写着“047”，男人和女人的手在画面边缘，焦点在两者之间来回，雨，琥珀光。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. close-up of a tablet screen with an abstract error log (no readable text) beside a worn handwritten logbook with the same relay number (text added in post), a man's and a woman's hands at the edges, rack focus between them, rain, amber light. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定特写，焦点从平板拉到日志本，雨滴落在屏幕，两只手不动，4秒。 结束状态：焦点落回手写本 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static close-up, rack focus from the tablet to the logbook, rain drops on the screen, both hands still, 4 seconds. End state: 焦点落回手写本 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

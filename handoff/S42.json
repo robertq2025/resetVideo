@@ -1,0 +1,137 @@
+{
+  "shot": "S42",
+  "act": "G",
+  "act_name": "旧数据",
+  "slug": "钥匙",
+  "start_sec": 190.0,
+  "duration_sec": 4.0,
+  "size": "近景",
+  "lens": "85mm",
+  "location": "粥铺",
+  "chars": [],
+  "desc": "他把钥匙推到她手边；她问“那我们呢”，他说钥匙给你。",
+  "dialogue": [
+    {
+      "speaker": "林曦 画外",
+      "zh": "那我们呢？",
+      "en": "And us?",
+      "in_shot_at": 0.2,
+      "placed_at": 0.2,
+      "placed_dur": 0.72,
+      "placed_text": "那我们呢？"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "钥匙给你。",
+      "en": "The key is yours.",
+      "in_shot_at": 1.2,
+      "placed_at": 1.2,
+      "placed_dur": 0.88,
+      "placed_text": "钥匙给你。"
+    },
+    {
+      "speaker": "林曦",
+      "zh": "一起。",
+      "en": "Together.",
+      "in_shot_at": 2.3,
+      "placed_at": 2.3,
+      "placed_dur": 0.65,
+      "placed_text": "一起。"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "嗯，一起。",
+      "en": "Mm. Together.",
+      "in_shot_at": 3.0,
+      "placed_at": 3.09,
+      "placed_dur": 1.09,
+      "placed_text": "嗯，一起。"
+    }
+  ],
+  "camera": {
+    "move": "固定",
+    "motivation": "交钥匙=交班，是全片动作终点",
+    "recipe": "固定 macro，钥匙从他的手到她的手，2 秒完成",
+    "scale_device": "无",
+    "execution_path": "首尾帧（他持 / 她持）",
+    "end_state": "钥匙落在她掌心，木桌轻响",
+    "fallback": "拆成“放手 → 落桌特写 → 她拿起”",
+    "frame_pairing": "需 END 帧"
+  },
+  "sound": {
+    "sfx": "钥匙在木桌上轻响、蒸汽。",
+    "music": "Cue 6 旧数据",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "粥铺：手部/物件，全部画外",
+    "audio_track": "S42_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "道具：黄铜钥匙",
+    "不可变：钥匙从他的手到她的手（全片唯一换手）",
+    "不可变：落在木桌上要有一声实感"
+  ],
+  "reference_images": [
+    "REF/PROP_KEY.png",
+    "REF/SCENE_STALL.png",
+    "REF/char_chenmo_ref.png",
+    "REF/char_linxi_ref.png"
+  ],
+  "continuity_locks": {
+    "shot_id": "S42",
+    "character": [
+      "陈默（手）",
+      "林曦（手）"
+    ],
+    "location": [
+      "STALL"
+    ],
+    "props": [
+      "黄铜钥匙"
+    ],
+    "must_not_change": [
+      "钥匙从他的手到她的手（全片唯一换手）",
+      "落在木桌上要有一声实感"
+    ]
+  },
+  "first_frame": {
+    "file": "S42_frame.png",
+    "source": "clip S42_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "钥匙落在她掌心，木桌轻响",
+    "note": "需生成：粥铺木桌上钥匙换手，成片里没有这个机位 → 等图像额度",
+    "method": "待生成"
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。天桥下的24小时粥铺，清晨：一盏裸灯泡的暖黄光，两口白瓷碗与热气，塑料凳，木桌，檐口滴水，远处城市刚醒，摊主不入镜。近景，陈默的手把黄铜钥匙从木桌上推过去，停在林曦手边，她看着钥匙没有立刻拿，晨光从塑料帘透进来，热气，两碗粥，只拍手，象征性。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. the 24-hour congee stall under the overpass at dawn: a single warm bare bulb, two white bowls and steam, plastic stools, a wooden table, rain dripping from the awning, the city just waking, the owner never in frame. close shot of Chen Mo's hand pushing the brass key across the wooden table until it stops beside Lin Xi's hand, she looks at it without picking it up, morning light through a plastic curtain, steam, two bowls, hands only, symbolic. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定近景，钥匙在桌面滑到她的手边，停住，她的手不动，晨光，4秒。 结束状态：钥匙落在她掌心，木桌轻响 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static close shot, the key slides across the table and stops beside her hand, her hand stays still, morning light, 4 seconds. End state: 钥匙落在她掌心，木桌轻响 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

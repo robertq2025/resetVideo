@@ -1,0 +1,38 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><style>
+html,body{margin:0;width:1400px;min-height:1080px;background:#0b0f13;color:#e4e8ec;
+ font-family:'Noto Sans SC','Microsoft YaHei',sans-serif}
+.h{display:flex;justify-content:space-between;align-items:center;padding:18px 34px;background:#111820;border-bottom:2px solid #1f2a34}
+.h b{font-size:30px;letter-spacing:2px}
+.h .m{font-size:16px;color:#93a1ad;letter-spacing:1px}
+.tag{padding:5px 12px;border:1px solid #57e389;color:#57e389;border-radius:3px;font-size:14px}
+.wrap{display:flex;gap:26px;padding:24px 34px}
+.left{width:800px} .left img{width:800px;height:450px;object-fit:cover;border:1px solid #25313c}
+.no{width:800px;height:450px;display:flex;align-items:center;justify-content:center;border:1px dashed #444;color:#777}
+.src{font-size:13px;color:#7f8d99;margin-top:8px;font-family:Consolas,monospace}
+.right{flex:1}
+table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.5}
+td{border-bottom:1px solid #1b242d;padding:6px 8px;vertical-align:top}
+td:first-child{width:92px;color:#57e389;white-space:nowrap}
+.p{padding:16px 34px;border-top:2px solid #1f2a34}
+.p h4{margin:0 0 8px;font-size:14px;color:#e0a34b;letter-spacing:2px}
+.blk{background:#0f151b;border:1px solid #222e39;padding:10px 12px;font-family:Consolas,monospace;
+ font-size:12.5px;line-height:1.55;color:#c9d3dc;margin-bottom:10px;word-break:break-word}
+.two{display:flex;gap:14px} .two>div{flex:1}
+.lock{font-size:13.5px;color:#c9d3dc;line-height:1.6;margin-top:10px}
+</style></head><body>
+<div class=h><div><b>S12 · 进度条</b>
+ <span class=m>&nbsp;&nbsp;最后一班 · 3.5s · 特写 · 100mm macro · 系统屏幕</span></div>
+ <div class=tag>已生成动态，可只做微调或替换</div></div>
+<div class=wrap><div class=left><img src='file:///D:/AI_Video/reboot/handoff/S12_frame.png'><div class=src>首帧来源：clip S12_FINAL.mp4 @0s</div>
+<div class=lock><b style=color:#57e389>不变项 · 必须逐字粘进提示词</b><br>城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统<br>故事时间：04:12 → 06:05，同一夜到清晨<br>天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）<br>文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空<br>脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准<br>画面事实（本镜）：新系统进度条从98%走到100%。</div></div>
+<div class=right><table><tr><td>画面</td><td>新系统进度条从98%走到100%。</td></tr><tr><td>对白</td><td>（无对白）</td></tr><tr><td>运镜动机</td><td>机器接管的时间压力，推近=逼近</td></tr><tr><td>运镜配方</td><td>起幅屏体全貌，3.5 秒匀速推到数字区，落幅 98% 占画面 1/2</td></tr><tr><td>规模装置</td><td>无</td></tr><tr><td>执行路径</td><td>首尾帧 + 后期贴 G05 三态</td></tr><tr><td>结束状态</td><td>100%，人工席位注销</td></tr><tr><td>失败替代</td><td>固定 + 后期数字推</td></tr><tr><td>首尾帧</td><td>需 END 帧；落幅已随包 S12_end.png</td></tr><tr><td>参考图</td><td>SCENE_SCREEN.png</td></tr><tr><td>文字贴图</td><td>G05_progress_98.png 0.0–1.2s；G05_progress_99.png 1.2–2.4s；G05_progress_100.png 2.4–3.5s</td></tr><tr><td>音效</td><td>电子提示音、电流升高。</td></tr><tr><td>音乐</td><td>Cue 1</td></tr><tr><td>转场</td><td>切</td></tr></table></div></div>
+<div class=p>
+<div class=two>
+<div><h4>IMAGE PROMPT (EN) · 直接粘贴</h4><div class=blk>cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. macro of an abstract system screen: dark UI, progress bar, error blocks, handshake confirmation panel, no readable text (all text added in post), rain drops and reflections on the glass. macro of a black control screen inside the relay cabinet, an abstract UI progress bar reaching 100%, cyan-white glow, no readable text, rain drops and a reflected eye on the glass, shallow depth of field, tense. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.</div></div>
+<div><h4>VIDEO PROMPT (EN) · 首帧驱动</h4><div class=blk>Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static macro, the progress bar fills from 98% to 100%, the screen flickers slightly, the reflected eye blinks, 3.5 seconds. End state: 100%，人工席位注销 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.</div></div>
+</div>
+<div class=two>
+<div><h4>图像提示词（中）</h4><div class=blk>电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。抽象的系统屏幕特写：深色UI、进度条、错误色块、握手确认框，无可读文字（所有文字后期合成），屏幕表面有雨滴与反光。继电器柜内黑色控制盒屏幕的极特写，抽象UI进度条走到100%，青白色光，无可读文字，屏幕表面有雨滴与一只眼睛的倒影，浅景深，紧张。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。</div></div>
+<div><h4>负面词 NEGATIVE（图像 / 视频）</h4><div class=blk>extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.<br><br>morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.</div></div>
+</div>
+</div></body></html>

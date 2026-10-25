@@ -1,0 +1,127 @@
+{
+  "shot": "S34",
+  "act": "E",
+  "act_name": "旧继电器",
+  "slug": "两只手",
+  "start_sec": 155.0,
+  "duration_sec": 3.0,
+  "size": "特写",
+  "lens": "100mm macro",
+  "location": "继电器柜",
+  "chars": [],
+  "desc": "两只手一起转动钥匙，屏幕确认，全暗，一声继电器。",
+  "dialogue": [
+    {
+      "speaker": "陈默",
+      "zh": "按吧。",
+      "en": "Press it.",
+      "in_shot_at": 0.2,
+      "placed_at": 0.2,
+      "placed_dur": 0.52,
+      "placed_text": "按吧。"
+    },
+    {
+      "speaker": "林曦",
+      "zh": "一起。",
+      "en": "Together.",
+      "in_shot_at": 1.1,
+      "placed_at": 1.1,
+      "placed_dur": 0.65,
+      "placed_text": "一起。"
+    }
+  ],
+  "camera": {
+    "move": "固定",
+    "motivation": "全片唯一的共同动作，必须看清两只手",
+    "recipe": "固定 macro，两只手从两侧入画，一起转 90°",
+    "scale_device": "无",
+    "execution_path": "首尾帧（未触 / 已转）",
+    "end_state": "屏幕确认，随后全暗",
+    "fallback": "拆成“她的手 → 他的手 → 灯灭”三镜",
+    "frame_pairing": "需 END 帧"
+  },
+  "sound": {
+    "sfx": "钥匙、屏幕确认音、全静音、继电器咔哒。",
+    "music": "Cue 4 旧继电器",
+    "transition": "切黑"
+  },
+  "lipsync": {
+    "policy": "手部/屏幕，全部画外",
+    "audio_track": "S34_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [
+    {
+      "plate": "OVERLAY/G10b_handshake_confirm.png",
+      "when": "确认音后 0.4s 内",
+      "how": "HANDSHAKE OK / LEGACY RECORDS: RETAINED，随后全暗"
+    }
+  ],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "道具：黄铜钥匙",
+    "不可变：两只手一起转钥匙",
+    "不可变：确认音后 0.5 秒全静音",
+    "不可变：屏幕用 G10b"
+  ],
+  "reference_images": [
+    "REF/PROP_KEY.png",
+    "REF/SCENE_CABINET.png",
+    "REF/char_chenmo_ref.png",
+    "REF/char_linxi_ref.png"
+  ],
+  "continuity_locks": {
+    "shot_id": "S34",
+    "character": [
+      "陈默（手）",
+      "林曦（手）"
+    ],
+    "location": [
+      "CABINET"
+    ],
+    "props": [
+      "黄铜钥匙"
+    ],
+    "must_not_change": [
+      "两只手一起转钥匙",
+      "确认音后 0.5 秒全静音",
+      "屏幕用 G10b"
+    ]
+  },
+  "first_frame": {
+    "file": "S34_frame.png",
+    "source": "clip S34_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": "S34_end.png",
+    "state": "屏幕确认，随后全暗",
+    "note": "落幅：LEGACY HANDSHAKE 确认后屏幕压暗（随后全暗由剪辑做）",
+    "method": "screen"
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。极特写，两只手叠在一起转动黄铜钥匙：一只粗糙的男人的手，一只左手无名指戴着细银戒的女人的手，屏幕光，雨，琥珀色，然后黑暗，亲密而庄重。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. extreme close-up of two hands together turning a brass key: one weathered male hand, one female hand with a thin silver ring on the ring finger, screen glow, rain, amber, then darkness, intimate and solemn. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定极特写，两只手一起转动钥匙，屏幕闪一下，画面瞬间全黑，一声继电器咔哒，3秒。 结束状态：屏幕确认，随后全暗 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static macro, the two hands turn the key together, the screen flashes, the frame goes black, a single relay click, 3 seconds. End state: 屏幕确认，随后全暗 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

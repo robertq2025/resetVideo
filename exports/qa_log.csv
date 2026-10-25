@@ -1,0 +1,45 @@
+﻿shot,tier,take,face_1to5,wardrobe_1to5,hands_1to5,background_1to5,motion_1to5,text_watermark,verdict,notes
+S01,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S02,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S03,C,1,n/a,n/a,n/a,5,4,none,pass_post,QC 发现末段信号灯为绿（违反 2:38 前禁绿）→ build_paperfix.signal_fix 按连通域重绘为红灯；成片 15.4s 复核为红，S35 162.0s 绿灯潮对比保留 | 原片近静态(帧差0.71)，已在时间线加 6% 缓推后为1.88；人物占画面高度<1/10，符合尺度对比设定
+S04,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S05,TITLE,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S06,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S07,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S08,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S09,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S10,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S11,A,1,4,5,4,5,5,none,pass_trim,跨镜互查：与 S23/S06 派生帧同脸（右颊疤、灰白寸头、胡髭、反光条、颈上钥匙） | 5 秒内面部缓慢漂移：鼻翼与下颌在下半段变宽；疤/胡髭/反光条/颈上钥匙全程稳定。取前 4 秒，并定为陈默脸部基准
+S12,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S13,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S14,C,1,n/a,n/a,n/a,5,5,pseudo_text,pass_text_fix,QC 复核：LED 与车身广告为伪汉字 → build_paperfix.bus_patches 颜色掩膜定位 + σ4 羽化虚化，t≥2.2s 采用 S14_FINAL.mp4；4.6s 最大漂移处仍覆盖；远处蓝色路牌字号过小未处理 | 公交车 LED 与出租车顶灯为伪汉字；按 OVERLAYS.md §4 对该区域定向模糊+压暗，路演版已避开
+S15,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S16,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S17,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S18,C,1,n/a,5,n/a,5,5,none,pass,背影奔跑，帧差 13.36 为全片最高，动作真实无滑步
+S19,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S20,C,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S21,A,1,5,5,4,5,4,none,pass,跨镜互查：与 S23 同脸（左眼下痣、短发、铁锈红围巾） | 左眼下痣、珍珠耳钉、铁锈红围巾三帧一致；平板在左手弯
+S22,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S23,A,1,5,5,4,5,5,none,pass_note,双人同框两张脸分别与 S11 / S21 对齐，未串脸；但颈绳上重叠挂着两把钥匙（圆头 + 长杆），违反“单把钥匙、无钥匙圈”；已试逐帧铜色连通域抹除，会把主钥匙柄挖成圆环且长杆残留 → 回退，列入重生成 | 双人同框三帧脸/衣一致；两处待修：颈绳钥匙与手中钥匙重复出现；发型轮廓比 S11 长，重做以 S11 为基准
+S24,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S25,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S26,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S27,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S28,C,1,n/a,5,4,5,5,none,pass,只给两个背影 + 伞 + 红围巾，符合记忆规则；伞由她手转到他手 | 只给背影符合记忆规则；伞由她手转到他手，正好对应“你把伞给我”，红围巾全程连续
+S29,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S30,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S31,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S32,C,1,n/a,n/a,n/a,5,5,pseudo_text,pass_text_fix,QC 复核：左页伪字迹 → build_paperfix.adopt 以 σ3 羽化局部虚化，t≥3.5s 采用 S32_FINAL.mp4；未贴 G11（该透视下纸面仅 280×90px，贴上去读不出反而更假），钢笔与右页保持清晰 | 6 秒为连续横移非跳切（帧差23.0 由运动造成）；桌面纸页伪字迹用 G11 预约单贴图覆盖
+S33,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S34,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S35,C,1,3,n/a,n/a,5,4,none,pass_post,绿灯由远及近铺满，人物极小(剪影级)；原片帧差2.83，加缓推后3.92
+S36,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S37,A,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S38,C,1,3,4,n/a,5,4,none,pass_post,原片近静态(帧差1.29)，加 6% 缓推后 3.42；两人剪影+半步距离符合设定
+S39,C,1,3,4,n/a,5,4,none,pass_note,黎明色温与 S38 夜景差异大，需靠过渡帧或 1 秒黑场衔接；两人背影与 S38 服装一致
+S40,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S41,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S42,B,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S43,C,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检
+S44,TITLE,,,,,,,,not_generated,镜头尚未生成（VideoGen 403），素材到位后按同一标准逐帧复检

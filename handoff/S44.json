@@ -1,0 +1,76 @@
+{
+  "shot": "S44",
+  "act": "G",
+  "act_name": "旧数据",
+  "slug": "片尾",
+  "start_sec": 197.0,
+  "duration_sec": 3.0,
+  "size": "字卡",
+  "lens": "-",
+  "location": "黑场",
+  "chars": [],
+  "desc": "黑场，绿色“04:21 重启完成 / 旧数据已保留”。",
+  "dialogue": [],
+  "camera": {
+    "move": "字卡",
+    "motivation": "片尾字卡，不需要摄影机运动",
+    "recipe": "黑场字卡 3 秒，最后一声继电器落在第 1 秒",
+    "scale_device": "无",
+    "execution_path": "后期合成（HTML 字卡）",
+    "end_state": "04:21 / 重启完成 / 旧数据已保留 / AI 披露",
+    "fallback": "直接淡入淡出",
+    "frame_pairing": "不适用"
+  },
+  "sound": {
+    "sfx": "最后一声继电器咔哒、静。",
+    "music": "Cue 6 旧数据",
+    "transition": "黑场"
+  },
+  "lipsync": {
+    "policy": "",
+    "audio_track": null,
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "画面事实（本镜）：黑场，绿色“04:21 重启完成 / 旧数据已保留”。"
+  ],
+  "reference_images": [],
+  "continuity_locks": null,
+  "first_frame": {
+    "file": "S44_frame.png",
+    "source": "片尾字卡",
+    "origin": "exports/endcard_1920x1080.png",
+    "resolution": "1920x1080",
+    "status": "字卡，无需生成"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "04:21 / 重启完成 / 旧数据已保留 / AI 披露",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "",
+    "image_en": "",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。黑场字卡：绿色小字“04:21 重启完成”，下一行“旧数据已保留”，停一秒，中文“重启”与英文REBOOT淡出，最后一声继电器咔哒。 结束状态：04:21 / 重启完成 / 旧数据已保留 / AI 披露 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. black end card: small green text '04:21 REBOOT COMPLETE', next line 'OLD DATA RETAINED', hold one second, Chinese title and English REBOOT fade out, final relay click. End state: 04:21 / 重启完成 / 旧数据已保留 / AI 披露 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "title/endcard (static)",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

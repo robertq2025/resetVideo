@@ -1,0 +1,115 @@
+{
+  "shot": "S25",
+  "act": "D",
+  "act_name": "同路人",
+  "slug": "比如今天",
+  "start_sec": 111.0,
+  "duration_sec": 4.0,
+  "size": "特写",
+  "lens": "85mm",
+  "location": "继电器柜",
+  "chars": [
+    "LIN"
+  ],
+  "desc": "她低头看那行字，嘴角动了一下。",
+  "dialogue": [
+    {
+      "speaker": "林曦",
+      "zh": "比如？",
+      "en": "Like what?",
+      "in_shot_at": 0.2,
+      "placed_at": 0.2,
+      "placed_dur": 0.51,
+      "placed_text": "比如？"
+    },
+    {
+      "speaker": "陈默 画外",
+      "zh": "比如今天。",
+      "en": "Like today.",
+      "in_shot_at": 1.1,
+      "placed_at": 1.1,
+      "placed_dur": 0.94,
+      "placed_text": "比如今天。"
+    }
+  ],
+  "camera": {
+    "move": "固定",
+    "motivation": "她第一次笑，镜头一动就假",
+    "recipe": "固定 85mm 俯角看纸面，只有视线与嘴角",
+    "scale_device": "无",
+    "execution_path": "首帧驱动",
+    "end_state": "纸面被雨点滴到",
+    "fallback": "表情僵则改手部 + 画外音",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "雨。",
+    "music": "Cue 3 同路人",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "手部/物件镜头，全部画外",
+    "audio_track": "S25_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [
+    {
+      "plate": "OVERLAY/G02_logpage_0417.png",
+      "when": "全程",
+      "how": "日志页"
+    },
+    {
+      "plate": "OVERLAY/G08_handwrite_047.png",
+      "when": "全程",
+      "how": "手写页"
+    }
+  ],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "林曦服装：深炭灰羊毛长大衣 + 黑色高领 + 铁锈红羊毛围巾（绕两圈）+ 小珍珠耳钉 + 左手细银戒",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "画面事实（本镜）：她低头看那行字，嘴角动了一下。"
+  ],
+  "reference_images": [
+    "REF/FACE_LIN_S21.png",
+    "REF/FACE_LIN_S23.png",
+    "REF/SCENE_CABINET.png",
+    "REF/char_linxi_ref.png"
+  ],
+  "continuity_locks": null,
+  "first_frame": {
+    "file": "S25_frame.png",
+    "source": "clip S25_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "纸面被雨点滴到",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。林曦：中国女性，43岁，清冷疲惫的脸，黑色短发别在耳后，左眼下一颗小痣，淡妆，褪色砖红色羊毛围巾，深炭灰风衣，黑色高领，银色三防平板，左手无名指戴一枚很细的银戒。必须与参考图完全同一张脸、同一套衣服。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。林曦脸部特写，她低头看画外的日志本，嘴角几乎不可见地动了一下，雨水，柜内琥珀光从下方照，平板冷光在下巴，疲惫而柔软，浅景深。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. LIN XI: Chinese woman, 43, elegant tired face, short black bob tucked behind ears, a small mole under the left eye, minimal makeup, faded brick-red wool scarf, dark charcoal trench coat, black roll-neck, silver rugged tablet, a thin silver ring on her left ring finger. Match the reference image exactly: same face, same wardrobe. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. close-up of Lin Xi looking down at the logbook off-screen, the corner of her mouth lifting almost imperceptibly, rain, amber cabinet light from below, tablet glow on her chin, tired and soft, shallow depth of field. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定特写，她低头，嘴角轻动，雨落下，4秒。 结束状态：纸面被雨点滴到 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static close-up, she looks down, the corner of her mouth moves, rain falls, 4 seconds. End state: 纸面被雨点滴到 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

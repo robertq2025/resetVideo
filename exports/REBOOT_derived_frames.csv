@@ -1,0 +1,30 @@
+﻿shot,method,source,source_time,crop_box,upscale,tint,note
+S22,clip_crop,shots/S11/S11_take01.mp4,1.2s,"330,60,1290,596",2.01x,-,他举钥匙前的近景，与 S11 同机位同光
+S31,clip_crop,shots/S11/S11_take01.mp4,2.6s,"400,90,1300,596",2.13x,-,“为什么”近景，比 S11 更近一档
+S36,clip_crop,shots/S11/S11_take01.mp4,3.4s,"330,60,1290,596",2.01x,green,绿灯后的他：同一张脸，加青绿偏光
+S06,clip_crop,shots/S11/S11_take01.mp4,4.0s,"520,300,1480,836",2.01x,-,钥匙入领口：胸口与反光条特写
+S20,clip_crop,shots/S21/S21_take01.mp4,0.8s,"620,60,1580,596",2.01x,-,她下车后站定，全景偏中景
+S25,clip_crop,shots/S21/S21_take01.mp4,3.6s,"640,80,1600,618",2.01x,-,她低头看那行字：视线向下
+S37,clip_crop,shots/S21/S21_take01.mp4,4.4s,"640,60,1600,598",2.01x,green,绿灯后的她：同一张脸，加青绿偏光
+S29,clip_crop,shots/S23/S23_take01.mp4,1.6s,"240,120,1680,930",1.33x,spark,火花前一刻的双人柜前
+S30,clip_crop,shots/S23/S23_take01.mp4,3.2s,"420,160,1500,765",1.79x,-,“承认”：比 S23 更紧的双人
+S34,clip_crop,shots/S23/S23_take01.mp4,4.2s,"300,560,1260,1080",2.08x,-,两只手一起转钥匙：柜门下手部区
+S01,clip_crop,shots/S23/S23_take01.mp4,2.4s,"560,150,1520,686",2.01x,red,柜内继电器阵与琥珀工作灯（红点段）
+S02,clip_crop,shots/S23/S23_take01.mp4,4.6s,"200,540,1160,1080",2.0x,-,手持钥匙贴近锁孔
+S17,clip_crop,shots/S23/S23_take01.mp4,4.8s,"160,540,1120,1076",2.01x,-,攥紧钥匙的手部特写
+S26,clip_crop,shots/S23/S23_take01.mp4,2.0s,"600,140,1560,677",2.01x,-,排查：柜内整排继电器
+S27,clip_crop,shots/S23/S23_take01.mp4,2.8s,"560,180,1520,716",2.01x,-,047 位胶带（文字后期贴 G09）
+S08,clip_crop,shots/S03/S03_take01.mp4,3.0s,"480,120,1440,656",2.01x,-,信号楼与天桥：路口左半
+S19,clip_crop,shots/S03/S03_take01.mp4,4.5s,"600,300,1560,836",2.01x,red,双闪段落：空路口下缘
+S43,clip_crop,shots/S39/S39_take01.mp4,2.0s,"560,300,1520,836",2.01x,green,两人走进绿灯：天亮街口
+S15,clip_crop,shots/S11/S11_take01.mp4,2.0s,"330,60,1290,596",2.01x,red,红屏照亮他的脸：与 S11 同机位
+S16,clip_crop,shots/S11/S11_take01.mp4,0.6s,"400,90,1360,626",2.01x,cold,抓起对讲机：冷光补一层（对讲机道具待生成）
+S42,clip_crop,shots/S23/S23_take01.mp4,4.4s,"200,560,1160,1080",2.08x,warm,钥匙换手：手部区加粥铺暖光
+S12,overlay_plate,assets/overlays/G05_progress_99.png,-,full frame,1.0x,-,进度条 99%（等待 047 应答）
+S13,overlay_plate,assets/overlays/G06_error_relay047.png,-,full frame,1.0x,-,RELAY 047 TIMEOUT 红屏
+S33,overlay_plate,assets/overlays/G10_tablet_handshake.png,-,full frame,1.0x,-,LEGACY HANDSHAKE 确认框
+S04,object_plate,G02_logpage_0417.png;G01_clock_0417.png,-,bg=desk,1.0x,desk,值班桌：电子钟 04:17 + 日志“04:17 正常”
+S07,object_plate,G11_appointment_0900.png,-,bg=desk,1.0x,desk,工程车仪表台上的复婚预约单 09:00
+S09,object_plate,G03_billboard_lingxi.png,-,bg=board,1.0x,board,天桥下巨屏：灵犀今日 04:17 上线
+S24,object_plate,G07_tablet_log047.png;G08_handwrite_047.png,-,bg=desk,1.0x,desk,两种记录：平板错误日志 vs 手写值班日志
+S41,object_plate,G11_appointment_0900.png,-,bg=desk,1.0x,desk,她把预约单折好收进内袋之前

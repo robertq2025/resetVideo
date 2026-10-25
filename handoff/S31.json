@@ -1,0 +1,121 @@
+{
+  "shot": "S31",
+  "act": "E",
+  "act_name": "旧继电器",
+  "slug": "为什么",
+  "start_sec": 141.0,
+  "duration_sec": 5.0,
+  "size": "特写",
+  "lens": "85mm",
+  "location": "继电器柜",
+  "chars": [
+    "CHEN"
+  ],
+  "desc": "他问为什么；她说想让你看看没有你也能转；转了吗？没有。",
+  "dialogue": [
+    {
+      "speaker": "陈默",
+      "zh": "为什么？",
+      "en": "Why?",
+      "in_shot_at": 0.2,
+      "placed_at": 0.62,
+      "placed_dur": 0.64,
+      "placed_text": "为什么？"
+    },
+    {
+      "speaker": "林曦 画外",
+      "zh": "想让你看看，没有你，它也能转。",
+      "en": "I wanted you to see it run without you.",
+      "in_shot_at": 1.2,
+      "placed_at": 1.41,
+      "placed_dur": 2.24,
+      "placed_text": "想让你看看，没有你，它也能转。"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "它转了吗？",
+      "en": "Did it?",
+      "in_shot_at": 3.4,
+      "placed_at": 3.78,
+      "placed_dur": 0.8,
+      "placed_text": "它转了吗？"
+    },
+    {
+      "speaker": "林曦 画外",
+      "zh": "没有。",
+      "en": "No.",
+      "in_shot_at": 4.4,
+      "placed_at": 4.72,
+      "placed_dur": 0.58,
+      "placed_text": "没有。"
+    }
+  ],
+  "camera": {
+    "move": "固定，轻推",
+    "motivation": "他终于问出口，镜头替他靠近一步",
+    "recipe": "5 秒推近 6%，起幅近景，落幅更近但不切特写",
+    "scale_device": "无",
+    "execution_path": "首帧驱动",
+    "end_state": "眼睛占画面上 1/3",
+    "fallback": "固定 + 后期数字推",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "雨。",
+    "music": "Cue 4 旧继电器",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "陈默唇形；林曦画外",
+    "audio_track": "S31_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "陈默服装：深藏蓝工装夹克 + 两条银色反光条 + 深色衬衫 + 牛皮绳挂单把黄铜钥匙（锁骨下方）",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "画面事实（本镜）：他问为什么；她说想让你看看没有你也能转；转了吗？没有。"
+  ],
+  "reference_images": [
+    "REF/FACE_CHEN_S11.png",
+    "REF/SCENE_CABINET.png",
+    "REF/char_chenmo_ref.png"
+  ],
+  "continuity_locks": null,
+  "first_frame": {
+    "file": "S31_frame.png",
+    "source": "clip S31_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "眼睛占画面上 1/3",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。陈默：中国男性，46岁，清瘦饱经风霜的脸，深陷疲惫的眼睛，花白寸头，短灰胡须与下巴山羊胡，右颊一道很浅的旧疤，深藏青色反光雨衣配银色安全条，炭灰色工作衬衫，脖子上用旧皮绳挂一把黄铜钥匙。必须与参考图完全同一张脸、同一套衣服。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。陈默脸部特写，雨与火花的光，表情裂开，林曦的模糊侧脸在前景，柜内琥珀光，浅景深，他问出“为什么”的瞬间。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. CHEN MO: Chinese man, 46, lean weathered face, deep-set tired eyes, short salt-and-pepper buzz cut, short gray mustache and goatee, a faint old scar on his right cheek, dark navy reflective raincoat with silver safety stripes, charcoal work shirt, a brass key on a worn leather cord around his neck. Match the reference image exactly: same face, same wardrobe. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. close-up of Chen Mo's face, rain and spark light, his expression cracking, Lin Xi's blurred profile in the foreground, amber cabinet light, shallow depth of field, the moment he asks why. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定特写，他看着她，嘴唇动，眼神从质问变成疼，5秒。 结束状态：眼睛占画面上 1/3 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static close-up, he looks at her, lips move, his eyes shift from accusation to pain, 5 seconds. End state: 眼睛占画面上 1/3 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

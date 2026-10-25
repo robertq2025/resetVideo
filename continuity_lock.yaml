@@ -1,0 +1,133 @@
+# 《重启》连续性锁 / CONTINUITY LOCK
+# 教材 book/06 §三 与 CHECKLISTS G2-05：每份提示词必须重复这些“不可变事实”，禁止写“同上”。
+# 生成任何一镜前，把该镜的 locks 原文粘进提示词的“不变项”块。
+
+artifact_type: "continuity"
+project_id: "REBOOT"
+version: "v1.1"
+date: "2026-10-24"
+
+global:
+  story_time: "04:12 → 06:05，同一夜到清晨"
+  weather: "暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）"
+  city: "海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统"
+  axis: "陈默始终在画左、林曦在画右；柜体是中缝。唯一越轴：S29 火花"
+  wardrobe_chen: "深藏蓝工装夹克 + 两条银色反光条 + 深色衬衫 + 牛皮绳挂单把黄铜钥匙（锁骨下方）"
+  wardrobe_lin: "深炭灰羊毛长大衣 + 黑色高领 + 铁锈红羊毛围巾（绕两圈）+ 小珍珠耳钉 + 左手细银戒"
+  memory_rule: "18 年前只拍背影/伞/围巾/物件，禁止生成年轻版正脸"
+  text_rule: "所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空"
+  face_canon: "陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准"
+
+locks:
+  - shot_id: "S01"
+    character: []
+    location: ["CABINET"]
+    props: ["047 继电器红 LED"]
+    screen_direction: []
+    must_not_change: ["画面 90% 为黑", "唯一光源是暗红 LED", "雨从柜门边缘滴下"]
+  - shot_id: "S02"
+    character: ["陈默（只出手）"]
+    location: ["CABINET"]
+    props: ["黄铜钥匙"]
+    must_not_change: ["手是 50 岁男性的手，指节有裂口", "钥匙单把、圆柄、无钥匙圈", "红点灭、绿点亮"]
+  - shot_id: "S03"
+    character: ["陈默（极小）"]
+    location: ["JUNCTION"]
+    props: []
+    screen_direction: ["人物向画面上方纵深走"]
+    must_not_change: ["人物不超过画面高度 1/10", "六车道空无一人", "信号灯为红"]
+  - shot_id: "S11"
+    character: ["陈默"]
+    location: ["JUNCTION"]
+    props: ["黄铜钥匙（颈上）"]
+    must_not_change: ["右颊 2cm 旧疤", "稀疏胡髭 + 下巴一小撮", "两鬓灰白寸头", "反光条在胸前两侧", "背景钠灯与红灯位置"]
+  - shot_id: "S13"
+    character: []
+    location: ["SCREEN"]
+    props: ["新系统屏幕"]
+    must_not_change: ["屏幕报错为红，文字后期贴 G06", "灯灭发生在 0.4 秒内", "随后 1.5 秒近静音"]
+  - shot_id: "S15"
+    character: ["陈默"]
+    location: ["CABINET"]
+    props: []
+    must_not_change: ["唯一光源是红屏", "眼里映出熄灭的灯排", "不得出现第二个人"]
+  - shot_id: "S20"
+    character: ["林曦"]
+    location: ["JUNCTION"]
+    props: ["加固平板", "红围巾"]
+    screen_direction: ["她从画右入画，车灯在她身后"]
+    must_not_change: ["平板夹在左手臂弯", "围巾绕两圈、垂在右侧", "车为深色旧轿车"]
+  - shot_id: "S21"
+    character: ["林曦"]
+    location: ["JUNCTION"]
+    props: ["加固平板"]
+    must_not_change: ["左眼下痣", "短黑发耳后收拢", "小珍珠耳钉", "柜内暖光落在右脸"]
+  - shot_id: "S23"
+    character: ["陈默", "林曦"]
+    location: ["CABINET"]
+    props: ["黄铜钥匙", "加固平板", "打开的继电器柜"]
+    screen_direction: ["陈默画左、林曦画右，柜体居中缝"]
+    must_not_change: ["两人视线相对但不越柜", "柜内琥珀灯为唯一暖源", "全片唯一双人同框中景（另一处只给 S38 全景）"]
+  - shot_id: "S24"
+    character: []
+    location: ["CABINET"]
+    props: ["加固平板", "值班日志"]
+    must_not_change: ["平板在右、纸本在左", "屏幕文字用 G07，纸面用 G08", "焦点在两者间切换"]
+  - shot_id: "S27"
+    character: ["陈默（只出手）"]
+    location: ["CABINET"]
+    props: ["胶带"]
+    must_not_change: ["胶带贴在 047 外壳，文字用 G09", "手电光从左入射"]
+  - shot_id: "S28"
+    character: ["年轻陈默（背影）", "年轻林曦（背影）"]
+    location: ["MEMORY_JUNCTION"]
+    props: ["黑伞", "红围巾"]
+    must_not_change: ["只拍背影", "伞从她手交到他手（对应台词）", "更暖的 2200K 与旧胶片颗粒", "无现代 LED 屏、无智能手机"]
+  - shot_id: "S29"
+    character: ["陈默", "林曦"]
+    location: ["CABINET"]
+    props: []
+    must_not_change: ["火花为蓝白，瞬间照亮", "允许越轴的一拍", "火花后 0.4 秒只留雨声"]
+  - shot_id: "S30"
+    character: ["陈默", "林曦"]
+    location: ["CABINET"]
+    props: []
+    must_not_change: ["两人距离比 S23 更近但不接触", "对白最干、混响最小"]
+  - shot_id: "S32"
+    character: []
+    location: ["MEMORY_HOME"]
+    props: ["行李箱", "倒扣结婚照", "预约单"]
+    must_not_change: ["横移方向自左向右", "结婚照只给背面/虚焦", "预约单文字用 G11", "窗外冷蓝为唯一光源"]
+  - shot_id: "S34"
+    character: ["陈默（手）", "林曦（手）"]
+    location: ["CABINET"]
+    props: ["黄铜钥匙"]
+    must_not_change: ["两只手一起转钥匙", "确认音后 0.5 秒全静音", "屏幕用 G10b"]
+  - shot_id: "S35"
+    character: ["陈默（极小）"]
+    location: ["JUNCTION"]
+    props: []
+    screen_direction: ["绿灯从画面深处向镜头方向漫来"]
+    must_not_change: ["全片第一次出现饱和绿", "雨声减弱", "人物仍只有陈默一人"]
+  - shot_id: "S38"
+    character: ["陈默", "林曦"]
+    location: ["JUNCTION"]
+    props: []
+    screen_direction: ["两人背向镜头，朝绿灯纵深"]
+    must_not_change: ["两人之间保持半步距离，不牵手", "人物占画面高度 ≤1/12", "绿灯成排"]
+  - shot_id: "S40"
+    character: ["陈默（手）", "林曦（手）"]
+    location: ["STALL"]
+    props: ["白瓷碗", "预约单", "黄铜钥匙"]
+    must_not_change: ["只拍手、碗、桌面，不拍脸", "裸灯泡为唯一暖源", "预约单与钥匙同框"]
+  - shot_id: "S42"
+    character: ["陈默（手）", "林曦（手）"]
+    location: ["STALL"]
+    props: ["黄铜钥匙"]
+    must_not_change: ["钥匙从他的手到她的手（全片唯一换手）", "落在木桌上要有一声实感"]
+  - shot_id: "S43"
+    character: ["陈默", "林曦"]
+    location: ["STALL"]
+    props: []
+    screen_direction: ["两人并排走向画面上方纵深"]
+    must_not_change: ["不牵手", "保持半步", "街道被绿灯照亮，天已亮"]

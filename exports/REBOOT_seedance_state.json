@@ -1,0 +1,20 @@
+{
+ "shots": {
+  "S22": {
+   "take01": {
+    "task_id": "task_r3A8GH3XZvWHByxaw38bK3q3T7ZUufOg",
+    "seed": 1221,
+    "duration": 5,
+    "resolution": "1080p",
+    "first_frame_url": "https://n.uguu.se/uZMFWCdu.png",
+    "end_frame_url": null,
+    "submitted_at": 1792902660,
+    "status": "succeeded",
+    "file": "shots\\S22\\S22_take01.mp4",
+    "frames": 121
+   }
+  }
+ },
+ "consec_fail": 10,
+ "requests": 2
+}

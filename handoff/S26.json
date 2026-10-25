@@ -1,0 +1,110 @@
+{
+  "shot": "S26",
+  "act": "E",
+  "act_name": "旧继电器",
+  "slug": "排查",
+  "start_sec": 115.0,
+  "duration_sec": 4.0,
+  "size": "中景",
+  "lens": "35mm",
+  "location": "继电器柜",
+  "chars": [
+    "CHEN",
+    "LIN"
+  ],
+  "desc": "他跪在柜前，她举平板打手电；047号继电器手动闭锁。",
+  "dialogue": [
+    {
+      "speaker": "林曦",
+      "zh": "047号继电器，手动闭锁。",
+      "en": "Relay 047, manual lock.",
+      "in_shot_at": 0.2,
+      "placed_at": 0.2,
+      "placed_dur": 2.04,
+      "placed_text": "047号继电器，手动闭锁。"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "047，老毛病。",
+      "en": "047. The old problem.",
+      "in_shot_at": 2.0,
+      "placed_at": 2.38,
+      "placed_dur": 1.53,
+      "placed_text": "047，老毛病。"
+    }
+  ],
+  "camera": {
+    "move": "固定",
+    "motivation": "他在“问诊”，镜头跟着手电走",
+    "recipe": "手持跟拍（幅度小），光斑从左扫到右，2 秒经过三排继电器",
+    "scale_device": "光影控制（手电为唯一动光源）",
+    "execution_path": "参考视频迁移 或 纯提示词",
+    "end_state": "光停在 047 号",
+    "fallback": "固定 + 后期移动光斑",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "继电器、手电开关、雨。",
+    "music": "Cue 4 旧继电器",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "柜内/手部，全部画外",
+    "audio_track": "S26_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "陈默服装：深藏蓝工装夹克 + 两条银色反光条 + 深色衬衫 + 牛皮绳挂单把黄铜钥匙（锁骨下方）",
+    "林曦服装：深炭灰羊毛长大衣 + 黑色高领 + 铁锈红羊毛围巾（绕两圈）+ 小珍珠耳钉 + 左手细银戒",
+    "轴线：陈默始终在画左、林曦在画右；柜体是中缝。唯一越轴：S29 火花",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "画面事实（本镜）：他跪在柜前，她举平板打手电；047号继电器手动闭锁。"
+  ],
+  "reference_images": [
+    "REF/FACE_CHEN_S11.png",
+    "REF/FACE_LIN_S21.png",
+    "REF/FACE_LIN_S23.png",
+    "REF/PROP_TABLET.png",
+    "REF/SCENE_CABINET.png",
+    "REF/char_chenmo_ref.png",
+    "REF/char_linxi_ref.png"
+  ],
+  "continuity_locks": null,
+  "first_frame": {
+    "file": "S26_frame.png",
+    "source": "clip S26_FINAL.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "光停在 047 号",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。陈默：中国男性，46岁，清瘦饱经风霜的脸，深陷疲惫的眼睛，花白寸头，短灰胡须与下巴山羊胡，右颊一道很浅的旧疤，深藏青色反光雨衣配银色安全条，炭灰色工作衬衫，脖子上用旧皮绳挂一把黄铜钥匙。必须与参考图完全同一张脸、同一套衣服。林曦：中国女性，43岁，清冷疲惫的脸，黑色短发别在耳后，左眼下一颗小痣，淡妆，褪色砖红色羊毛围巾，深炭灰风衣，黑色高领，银色三防平板，左手无名指戴一枚很细的银戒。必须与参考图完全同一张脸、同一套衣服。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。中景，陈默跪在打开的继电器柜前，半个身子探进去，林曦站在他身后，一手举平板一手打手电，雨从柜门边缘滴下，旧线新线交错，灰尘，琥珀工作灯，协作的紧张感。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. CHEN MO: Chinese man, 46, lean weathered face, deep-set tired eyes, short salt-and-pepper buzz cut, short gray mustache and goatee, a faint old scar on his right cheek, dark navy reflective raincoat with silver safety stripes, charcoal work shirt, a brass key on a worn leather cord around his neck. Match the reference image exactly: same face, same wardrobe. LIN XI: Chinese woman, 43, elegant tired face, short black bob tucked behind ears, a small mole under the left eye, minimal makeup, faded brick-red wool scarf, dark charcoal trench coat, black roll-neck, silver rugged tablet, a thin silver ring on her left ring finger. Match the reference image exactly: same face, same wardrobe. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. medium shot, Chen Mo kneeling half inside the open relay cabinet, Lin Xi standing behind him holding a tablet and a flashlight, rain dripping from the open door, old and new wires, dust, amber work light, collaborative tension. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定中景，陈默在柜内轻微移动，林曦的手电光缓慢扫过，雨滴落下，4秒。 结束状态：光停在 047 号 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static medium shot, Chen moves slightly inside the cabinet, Lin's flashlight beam sweeps slowly, rain drips, 4 seconds. End state: 光停在 047 号 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

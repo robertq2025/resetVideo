@@ -1,0 +1,94 @@
+{
+  "shot": "S19",
+  "act": "D",
+  "act_name": "同路人",
+  "slug": "双闪",
+  "start_sec": 82.0,
+  "duration_sec": 5.0,
+  "size": "中景",
+  "lens": "50mm",
+  "location": "北站路口",
+  "chars": [
+    "CHEN"
+  ],
+  "desc": "他跑到天桥下停住，黑色轿车双闪，车门开了一条缝。",
+  "dialogue": [
+    {
+      "speaker": "陈默",
+      "zh": "……你怎么在这。",
+      "en": "Why are you here?",
+      "in_shot_at": 0.5,
+      "placed_at": 0.5,
+      "placed_dur": 1.04,
+      "placed_text": "……你怎么在这。"
+    }
+  ],
+  "camera": {
+    "move": "固定",
+    "motivation": "她的车第一次进入他的世界，要“隔着雨看”",
+    "recipe": "机位不动，靠前景湿挡风玻璃与雨丝做视差；双闪 1Hz",
+    "scale_device": "前景遮挡/视差",
+    "execution_path": "纯提示词",
+    "end_state": "车门推开，红围巾先出画",
+    "fallback": "固定 + 后期雨丝前景层",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "双闪、雨、远处喇叭。",
+    "music": "Cue 3 同路人",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "可唇形，也可画外保留背影",
+    "audio_track": "S19_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "陈默服装：深藏蓝工装夹克 + 两条银色反光条 + 深色衬衫 + 牛皮绳挂单把黄铜钥匙（锁骨下方）",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "画面事实（本镜）：他跑到天桥下停住，黑色轿车双闪，车门开了一条缝。"
+  ],
+  "reference_images": [
+    "REF/FACE_CHEN_S11.png",
+    "REF/SCENE_JUNCTION.png",
+    "REF/char_chenmo_ref.png"
+  ],
+  "continuity_locks": null,
+  "first_frame": {
+    "file": "S19_frame.png",
+    "source": "clip S19_FINAL.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "车门推开，红围巾先出画",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。陈默：中国男性，46岁，清瘦饱经风霜的脸，深陷疲惫的眼睛，花白寸头，短灰胡须与下巴山羊胡，右颊一道很浅的旧疤，深藏青色反光雨衣配银色安全条，炭灰色工作衬衫，脖子上用旧皮绳挂一把黄铜钥匙。必须与参考图完全同一张脸、同一套衣服。海州北站路口：凌晨四点，暴雨中的空旷六车道十字路口，1990年代混凝土人行天桥，生锈的信号控制塔，老北站立面与熄灭的霓虹，湿沥青长反光，钠灯橙光，一家只亮一盏暖灯的24小时粥铺，远处雾中的CBD天际线，无人群。从陈默背后拍的中景，他站在天桥下，黑色轿车打着琥珀色双闪，车门开了一条缝，雨，肩膀因为急促呼吸起伏，车窗里隐约一点红围巾，紧张。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. CHEN MO: Chinese man, 46, lean weathered face, deep-set tired eyes, short salt-and-pepper buzz cut, short gray mustache and goatee, a faint old scar on his right cheek, dark navy reflective raincoat with silver safety stripes, charcoal work shirt, a brass key on a worn leather cord around his neck. Match the reference image exactly: same face, same wardrobe. NORTH STATION JUNCTION, HAIZHOU: a vast empty six-lane intersection at 4 a.m. in heavy rain, 1990s concrete pedestrian overpass, rusty traffic-signal control tower, old north railway station facade with dead neon, wet asphalt with long reflections, sodium-orange streetlamps, a 24-hour congee stall with a single warm bulb, foggy CBD skyline in the distance, no crowds. medium shot from behind Chen Mo, standing under the overpass, a black sedan with amber hazard lights, the door open a crack, rain, his shoulders rising with a sharp breath, a hint of red scarf inside the car, tension. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定中景，双闪明暗，人物肩膀起伏，雨落下，车门缝里没有动作，5秒。 结束状态：车门推开，红围巾先出画 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static medium shot, hazard lights blink, the shoulders rise and fall, rain falls, no movement from the car door, 5 seconds. End state: 车门推开，红围巾先出画 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "shot": "S13",
+  "act": "B",
+  "act_name": "最后一班",
+  "slug": "崩溃",
+  "start_sec": 56.5,
+  "duration_sec": 3.5,
+  "size": "特写",
+  "lens": "100mm macro",
+  "location": "系统屏幕",
+  "chars": [
+    "CHEN"
+  ],
+  "desc": "屏幕红屏报错，全城灯灭，1.5秒静音。",
+  "dialogue": [],
+  "camera": {
+    "move": "轻微手持",
+    "motivation": "世界被抽走的一瞬，镜头不能补偿",
+    "recipe": "轻微手持，报错后 0.5 秒内停止一切运动，与灯灭一起“僵住”",
+    "scale_device": "静默（1.5 秒近静音）",
+    "execution_path": "纯提示词 + 后期 crash zoom 0.3 秒",
+    "end_state": "全黑，只剩雨声",
+    "fallback": "固定 + 后期快速缩放 + 突然静音",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "电流啪地抽掉、1.5秒静音耳鸣、雨声变大。",
+    "music": "Cue 2 黑城",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "",
+    "audio_track": null,
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [
+    {
+      "plate": "OVERLAY/G06_error_relay047.png",
+      "when": "全程",
+      "how": "红屏铺满，断电后 1.5s 近静音"
+    }
+  ],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "陈默服装：深藏蓝工装夹克 + 两条银色反光条 + 深色衬衫 + 牛皮绳挂单把黄铜钥匙（锁骨下方）",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "道具：新系统屏幕",
+    "不可变：屏幕报错为红，文字后期贴 G06",
+    "不可变：灯灭发生在 0.4 秒内",
+    "不可变：随后 1.5 秒近静音"
+  ],
+  "reference_images": [
+    "REF/FACE_CHEN_S11.png",
+    "REF/SCENE_SCREEN.png",
+    "REF/char_chenmo_ref.png"
+  ],
+  "continuity_locks": {
+    "shot_id": "S13",
+    "character": [],
+    "location": [
+      "SCREEN"
+    ],
+    "props": [
+      "新系统屏幕"
+    ],
+    "must_not_change": [
+      "屏幕报错为红，文字后期贴 G06",
+      "灯灭发生在 0.4 秒内",
+      "随后 1.5 秒近静音"
+    ]
+  },
+  "first_frame": {
+    "file": "S13_frame.png",
+    "source": "clip S13_FINAL.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "全黑，只剩雨声",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。陈默：中国男性，46岁，清瘦饱经风霜的脸，深陷疲惫的眼睛，花白寸头，短灰胡须与下巴山羊胡，右颊一道很浅的旧疤，深藏青色反光雨衣配银色安全条，炭灰色工作衬衫，脖子上用旧皮绳挂一把黄铜钥匙。必须与参考图完全同一张脸、同一套衣服。抽象的系统屏幕特写：深色UI、进度条、错误色块、握手确认框，无可读文字（所有文字后期合成），屏幕表面有雨滴与反光。同一个屏幕瞬间变成红色错误状态，抽象故障UI（无可读文字），红光溢到背景中陈默的脸上，雨水，柜内变暗，城市熄灭的瞬间。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. CHEN MO: Chinese man, 46, lean weathered face, deep-set tired eyes, short salt-and-pepper buzz cut, short gray mustache and goatee, a faint old scar on his right cheek, dark navy reflective raincoat with silver safety stripes, charcoal work shirt, a brass key on a worn leather cord around his neck. Match the reference image exactly: same face, same wardrobe. macro of an abstract system screen: dark UI, progress bar, error blocks, handshake confirmation panel, no readable text (all text added in post), rain drops and reflections on the glass. the same screen snapping into a red error state, abstract fault UI (no readable text), red light spilling onto Chen Mo's face in the background, rain, the cabinet going dark, the instant the city goes black. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定极特写，屏幕闪红，红光铺满画面，背景人物脸沉入黑暗，轻微手持抖动，随后1.5秒近乎全静音，3.5秒。 结束状态：全黑，只剩雨声 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static macro, the screen flashes red, red light floods the frame, the face in the background sinks into darkness, a slight handheld jolt, then near-total silence for 1.5 seconds, 3.5 seconds. End state: 全黑，只剩雨声 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

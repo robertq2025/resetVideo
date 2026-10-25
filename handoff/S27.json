@@ -1,0 +1,146 @@
+{
+  "shot": "S27",
+  "act": "E",
+  "act_name": "旧继电器",
+  "slug": "胶带",
+  "start_sec": 119.0,
+  "duration_sec": 6.0,
+  "size": "特写",
+  "lens": "100mm macro",
+  "location": "继电器柜",
+  "chars": [],
+  "desc": "047继电器上贴着“别在雨天罢工”的胶带。",
+  "dialogue": [
+    {
+      "speaker": "林曦",
+      "zh": "你给它写过条子？",
+      "en": "You left it a note?",
+      "in_shot_at": 0.3,
+      "placed_at": 0.3,
+      "placed_dur": 1.35,
+      "placed_text": "你给它写过条子？"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "写过。“别在雨天罢工。”",
+      "en": "I did. 'Don't quit in the rain.'",
+      "in_shot_at": 1.9,
+      "placed_at": 1.9,
+      "placed_dur": 1.85,
+      "placed_text": "写过。“别在雨天罢工。”"
+    },
+    {
+      "speaker": "林曦",
+      "zh": "它听你的。",
+      "en": "It listens to you.",
+      "in_shot_at": 3.7,
+      "placed_at": 3.89,
+      "placed_dur": 0.85,
+      "placed_text": "它听你的。"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "它听了十八年。",
+      "en": "It has for eighteen years.",
+      "in_shot_at": 4.8,
+      "placed_at": 4.87,
+      "placed_dur": 1.21,
+      "placed_text": "它听了十八年。"
+    }
+  ],
+  "camera": {
+    "move": "固定，轻微横移",
+    "motivation": "情感证据，必须让人读到",
+    "recipe": "起幅胶带左端，3 秒匀速横移，落幅整句可读",
+    "scale_device": "无",
+    "execution_path": "首尾帧 + 后期贴 G09",
+    "end_state": "“别在雨天罢工”完整入画",
+    "fallback": "固定 + 后期推近",
+    "frame_pairing": "需 END 帧"
+  },
+  "sound": {
+    "sfx": "继电器轻响、雨、手电。",
+    "music": "Cue 4 旧继电器",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "柜内/胶带，全部画外",
+    "audio_track": "S27_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [
+    {
+      "plate": "OVERLAY/G08_handwrite_047.png",
+      "when": "起幅",
+      "how": "手写记录"
+    },
+    {
+      "plate": "OVERLAY/G09_tape_biezaipayi.png",
+      "when": "落幅",
+      "how": "继电器外壳胶带「别在雨天罢工」，透视跟随柜体，不透明度 78%"
+    }
+  ],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "道具：胶带",
+    "不可变：胶带贴在 047 外壳，文字用 G09",
+    "不可变：手电光从左入射"
+  ],
+  "reference_images": [
+    "REF/SCENE_CABINET.png",
+    "REF/char_chenmo_ref.png",
+    "REF/char_linxi_ref.png"
+  ],
+  "continuity_locks": {
+    "shot_id": "S27",
+    "character": [
+      "陈默（只出手）"
+    ],
+    "location": [
+      "CABINET"
+    ],
+    "props": [
+      "胶带"
+    ],
+    "must_not_change": [
+      "胶带贴在 047 外壳，文字用 G09",
+      "手电光从左入射"
+    ]
+  },
+  "first_frame": {
+    "file": "S27_frame.png",
+    "source": "clip S27_FINAL.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": "S27_end.png",
+    "state": "“别在雨天罢工”完整入画",
+    "note": "横移落幅：胶带整句“别在雨天罢工”可读（底板取 S23 柜内）",
+    "method": "cabinet_tape"
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。极特写，一只旧继电器上贴着发黄胶带，手写汉字（不可读，后期合成“别在雨天罢工”），男人的手指，女人的手电光束，灰尘，雨，琥珀色，亲密。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. extreme close-up of an old relay with a yellowed strip of tape and handwritten Chinese characters (unreadable, text added in post), the man's fingers, the woman's flashlight beam, dust, rain, amber, intimate. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定极特写，手电光束缓慢扫过胶带，手指轻触，灰尘浮动，6秒。 结束状态：“别在雨天罢工”完整入画 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static macro, the flashlight beam sweeps across the tape, fingers touch it lightly, dust floats, 6 seconds. End state: “别在雨天罢工”完整入画 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

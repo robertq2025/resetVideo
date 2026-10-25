@@ -1,0 +1,7 @@
+﻿cue,start_s,end_s,instrumentation,source,license
+Cue 1,0.0,56.5,"D minor drone, 60BPM pulse, felt piano",original procedural synthesis (numpy),"original, no third-party material"
+Cue 2,60.0,82.0,"sub drop, high string cluster, tinnitus, ticks",original procedural synthesis (numpy),"original, no third-party material"
+Cue 3,82.0,115.0,cello and felt piano in conversation,original procedural synthesis (numpy),"original, no third-party material"
+Cue 4,115.0,158.0,"pulse returns, cello/piano counterpoint, spark",original procedural synthesis (numpy),"original, no third-party material"
+Cue 5,158.0,180.0,"strings open, D major chord at 2:53",original procedural synthesis (numpy),"original, no third-party material"
+Cue 6,180.0,200.0,"solo piano, unresolved D sus2",original procedural synthesis (numpy),"original, no third-party material"

@@ -1,0 +1,81 @@
+{
+  "title": "重启 / REBOOT",
+  "runtime_sec": 200.0,
+  "shot_count": 44,
+  "line_count": 72,
+  "dialogue_sec": 103.3,
+  "srt_cues": 72,
+  "trailer_sec": 117.6,
+  "trailer_cues": 44,
+  "keyframes": [
+    {
+      "id": "K01",
+      "shot": "S03",
+      "file": "K01_junction.png",
+      "name": "路口全景",
+      "use": "开场/世界建立"
+    },
+    {
+      "id": "K02",
+      "shot": "S11",
+      "file": "K02_chen_close.png",
+      "name": "陈默雨夜近景",
+      "use": "男主锁脸/主视觉"
+    },
+    {
+      "id": "K03",
+      "shot": "S10",
+      "file": "K03_cabinet.png",
+      "name": "旧柜与标签",
+      "use": "道具/场景"
+    },
+    {
+      "id": "K04",
+      "shot": "S21",
+      "file": "K04_lin_close.png",
+      "name": "林曦雨夜近景",
+      "use": "女主锁脸/主视觉"
+    },
+    {
+      "id": "K05",
+      "shot": "S23",
+      "file": "K05_two_shot.png",
+      "name": "柜前双人",
+      "use": "关系/预告"
+    },
+    {
+      "id": "K06",
+      "shot": "S35",
+      "file": "K06_green_wave.png",
+      "name": "绿灯潮",
+      "use": "视觉高潮/海报"
+    },
+    {
+      "id": "K07",
+      "shot": "S38",
+      "file": "K07_two_green.png",
+      "name": "两人与绿灯",
+      "use": "主海报"
+    },
+    {
+      "id": "K08",
+      "shot": "S40",
+      "file": "K08_stall.png",
+      "name": "粥铺桌面",
+      "use": "结尾/质感"
+    },
+    {
+      "id": "K09",
+      "shot": "S28",
+      "file": "K09_umbrella.png",
+      "name": "记忆里的伞",
+      "use": "记忆/预告"
+    }
+  ],
+  "checks": {
+    "runtime_is_over_180": true,
+    "trailer_under_120": true,
+    "all_shots_have_video_prompt": true,
+    "all_non_title_shots_have_image_prompt": true
+  }
+}

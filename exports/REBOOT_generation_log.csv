@@ -1,0 +1,45 @@
+﻿shot,tier,act,location,duration_sec,first_frame,preferred_tool,model_version,date,prompt_version,job_id,take,status,license,sha256,notes
+S01,B,A,CABINET,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S02,B,A,CABINET,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S03,C,A,JUNCTION,6.0,K01_junction.png,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5psyv21kw7hk4h0qdsxshst,1,adopted,,0fc8499a49eca009ed80862976ed6ce7a6234ff9c1fc29c76b4a4b6a3ce990fa,downloaded 1920x1080; QA see exports/qa_log.csv
+S04,B,A,CONTROL_ROOM,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S05,TITLE,A,BLACK,4.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,not_video,,,title/endcard
+S06,B,A,JUNCTION,3.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S07,B,B,VAN,6.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S08,B,B,SIGNAL_BLDG,4.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S09,A,B,BILLBOARD,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S10,B,B,CABINET,5.0,K03,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,not_video,,,keyframe still in previs
+S11,A,B,JUNCTION,5.0,K02_chen_close.png,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5pswmcnjknfg673yabajegc,1,adopted,,23ae692d02ee2b30a5ab7745b6ba9ea5d6c6e36b8a8c0b86d9104c9554f4a98c,downloaded 1920x1080; QA see exports/qa_log.csv
+S12,B,B,SCREEN,3.5,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S13,B,B,SCREEN,3.5,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S14,C,C,JUNCTION,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5psyv73xrn0nty4gpnp0vgj,1,adopted,,cee56f5ce1a38886388c5c93dfab98cd9ef1402120576960c31d348b9220aa42,downloaded 1920x1080; QA see exports/qa_log.csv
+S15,A,C,CABINET,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S16,B,C,CABINET,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S17,B,C,JUNCTION,3.5,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S18,C,C,JUNCTION,3.5,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5psyvbms599s1abatrz5b45,1,adopted,,f1e66e0743bf9aeb026989eb805b7474bc4e4caf43d726054d5e4838515ae1ec,downloaded 1920x1080; QA see exports/qa_log.csv
+S19,B,D,JUNCTION,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S20,C,D,JUNCTION,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S21,A,D,JUNCTION,5.0,K04_lin_close.png,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5pswmt20te7wgs1ftztpp96,1,adopted,,49c92b337eb7d779ee23f258dce233230722c7451becce87e27f1b99152de16b,downloaded 1920x1080; QA see exports/qa_log.csv
+S22,A,D,JUNCTION,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S23,A,D,CABINET,5.0,K05_two_shot.png,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5pswn7wsk9p8ev3mqzjg675,1,adopted,,7853be394d35ddfcb358a461338016a5d0ea9ddadd5e1acfc3fc02c62f3e2446,downloaded 1920x1080; QA see exports/qa_log.csv
+S24,B,D,CABINET,4.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S25,A,D,CABINET,4.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S26,B,E,CABINET,4.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S27,B,E,CABINET,6.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S28,C,E,MEMORY_JUNCTION,7.0,K09_umbrella.png,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5psyvwe3sknzczaezgjhvg6,1,adopted,,3ef349dd8d157c2ea8f7dc55139eb5ff022b5ae3240a34919ca529ae2cb0ed11,downloaded 1920x1080; QA see exports/qa_log.csv
+S29,A,E,CABINET,4.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S30,A,E,CABINET,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S31,A,E,CABINET,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S32,C,E,MEMORY_HOME,6.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5psyw0teadrtajj5bw4ad6s,1,adopted,,c5ebc7d42839154841b136df905e93aa0a9019d959653514d64248c4b8bc3fee,downloaded 1920x1080; QA see exports/qa_log.csv
+S33,B,E,SCREEN,3.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S34,B,E,CABINET,3.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S35,C,F,JUNCTION,5.0,K06_green_wave.png,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5psywdehdcys82aj50r4hah,1,adopted,,620347d1f05fe9d7733e65204b70575d2f898aa525d2cf9def4fc90beaaf6667,downloaded 1920x1080; QA see exports/qa_log.csv
+S36,A,F,JUNCTION,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S37,A,F,JUNCTION,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S38,C,F,JUNCTION,3.5,K07_two_green.png,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5psywr15q11s13geqgvt00c,1,adopted,,48a88481897d5a79bb4da7c1803f06f336bff450134494a350821b05199fc388,downloaded 1920x1080; QA see exports/qa_log.csv
+S39,C,F,JUNCTION,3.5,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,video_01m5psywx78vh42mxtkhdyvwds,1,adopted,,dcbfd7b28b2707aa0f8ba16499eaf0463d2105fd2f63817dfce312535808adc8,downloaded 1920x1080; QA see exports/qa_log.csv
+S40,B,G,STALL,5.0,K08,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,not_video,,,keyframe still in previs
+S41,B,G,STALL,5.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S42,B,G,STALL,4.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S43,C,G,STALL,3.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,pending,,,blocked: HTTP 403
+S44,TITLE,G,BLACK,3.0,,Qoder VideoGen,wan30,2026-10-24,v1 2026-10-24,,,not_video,,,title/endcard

@@ -1,0 +1,14 @@
+﻿shot,method,source,note
+S04,plate,overlay plate,下摇落幅：日志“04:17 正常 / 人工交班：陈默”占画面主体，起幅的电子钟已摇出画
+S08,clip_crop,shots/S03@3.0s,升镜落幅：信号楼全景，人物约占画面 1/12；取 S03@3.0 全幅，与其首帧同一瞬间，信号灯同为红（重启前）
+S09,plate,overlay plate,缓升落幅：巨屏压住上部天空，屏体文字用真实贴图 G03
+S10,cabinet_tape,K03 cabinet keyframe + tape overlay,横移落幅：褪色胶带“林曦”完整入画（底板取 K03 柜内）
+S12,screen,overlay screen,轻推落幅：进度条 100% 占画面约一半，人工席位注销
+S27,cabinet_tape,K03 cabinet keyframe + tape overlay,横移落幅：胶带整句“别在雨天罢工”可读（底板取 S23 柜内）
+S32,plate,overlay plate,横移落幅：停在摊开的复婚预约单 09:00 上
+S34,screen,overlay screen,落幅：LEGACY HANDSHAKE 确认后屏幕压暗（随后全暗由剪辑做）
+S35,clip_last,shots/S35,升镜落幅：绿灯成排铺满画面（取已交付 S35 的最后一帧）
+S22,待生成,-,落幅要求黄铜钥匙居中，但 S11 里钥匙垂在衣襟下沿外、胸口段只到牛皮绳；裁到底也拿不到“钥匙占画面中心” → 等图像额度
+S15,待生成,-,dolly zoom 需要背景透视真实变化，裁切与贴图都造不出来 → 等图像额度或 3D 预演
+S30,待生成,-,落幅是“她的视线先移开”，属于表演内容变化 → 等图像额度
+S42,待生成,-,粥铺木桌上钥匙换手，成片里没有这个机位 → 等图像额度

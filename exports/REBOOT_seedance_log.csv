@@ -1,0 +1,13 @@
+﻿ts,shot,take,task_id,seed,duration,resolution,status,frames,bytes,video_url,note
+2026-10-24 21:28:48,S29,1,task_rR5ASKWhZchosTRBGgMnsrdhIw4ZzgvP,1291,4,1080p,succeeded,,7932050,https://ark-acg-cn-beijing.tos-cn-beijing.volces.com/doubao-seedance-2-5/2130715718/Video/1b4ve-55622152016202-tgc_b0394,fps=24 ratio=16:9 seed=1291
+2026-10-24 21:34:01,S22,1,task_r3A8GH3XZvWHByxaw38bK3q3T7ZUufOg,1221,5,1080p,succeeded,121,5873438,https://ark-acg-cn-beijing.tos-cn-beijing.volces.com/doubao-seedance-2-5/2130715718/Video/psmim-00132152016202-tgc_a65c7,recovered fps=24
+2026-10-24 21:34:29,S30,1,,,5.0,1080p,exception,,,,"HTTP 403: {""error"":{""code"":""insufficient_user_quota"",""message"":""预扣费额度失败, 用户剩余额度: ¥6.178718, 需要预扣费额度: ¥15.015000""}}"
+2026-10-24 21:34:41,S30,2,,,5.0,1080p,exception,,,,"HTTP 403: {""error"":{""code"":""insufficient_user_quota"",""message"":""预扣费额度失败, 用户剩余额度: ¥6.178718, 需要预扣费额度: ¥15.015000""}}"
+2026-10-24 21:34:52,S31,1,,,5.0,1080p,exception,,,,"HTTP 403: {""error"":{""code"":""insufficient_user_quota"",""message"":""预扣费额度失败, 用户剩余额度: ¥6.178718, 需要预扣费额度: ¥15.015000""}}"
+2026-10-24 21:35:06,S31,2,,,5.0,1080p,exception,,,,"HTTP 403: {""error"":{""code"":""insufficient_user_quota"",""message"":""用户额度不足, 剩余额度: ¥-22.711640""}}"
+2026-10-24 21:36:03,S31,1,,,5.0,720p,exception,,,,"HTTP 403: {""error"":{""code"":""insufficient_user_quota"",""message"":""用户额度不足, 剩余额度: ¥-22.711640""}}"
+2026-10-24 21:58:55,S31,1,,,5.0,1080p,exception,,,,"HTTP 403: {""error"":{""code"":""insufficient_user_quota"",""message"":""用户额度不足, 剩余额度: ¥-13.622042""}}"
+2026-10-24 21:59:16,S33,1,,,3.0,480p,exception,,,,"HTTP 403: {""error"":{""code"":""insufficient_user_quota"",""message"":""用户额度不足, 剩余额度: ¥-13.622042""}}"
+2026-10-24 23:31:58,S30,1,,,5.0,1080p,exception,,,,"HTTP 503: {""error"":{""message"":"" (request id: 2026102506315879344466296e93ae3XpG01xAu)"",""type"":""shell_api_error""}}"
+2026-10-24 23:32:36,S30,1,,,5.0,1080p,exception,,,,"HTTP 503: {""error"":{""message"":"" (request id: 2026102506323641579952896e93ae3TuCYeicL)"",""type"":""shell_api_error""}}"
+2026-10-24 23:32:59,S30,1,,,5.0,1080p,exception,,,,"HTTP 503: {""error"":{""message"":"" (request id: 2026102506325984537549596e93ae3bII1gMww)"",""type"":""shell_api_error""}}"

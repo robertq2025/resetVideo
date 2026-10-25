@@ -1,0 +1,45 @@
+﻿shot,has_first_frame,frame_source,status,frame_pairing,has_end_frame
+S01,yes,clip S01_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S02,yes,clip S02_FINAL.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S03,yes,clip S03_FINAL.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S04,yes,clip S04_take01.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S05,yes,片名字卡,字卡，无需生成,不适用,no
+S06,yes,clip S06_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S07,yes,clip S07_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S08,yes,clip S08_FINAL.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S09,yes,clip S09_FINAL.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S10,yes,clip S10_take01.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S11,yes,clip S11_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S12,yes,clip S12_FINAL.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S13,yes,clip S13_FINAL.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S14,yes,clip S14_FINAL.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S15,yes,clip S15_take01.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧（两张关键帧）,no
+S16,yes,clip S16_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S17,yes,clip S17_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S18,yes,clip S18_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S19,yes,clip S19_FINAL.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S20,yes,clip S20_FINAL.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S21,yes,clip S21_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S22,yes,clip S22_take01.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,no
+S23,yes,clip S23_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S24,yes,clip S24_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S25,yes,clip S25_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S26,yes,clip S26_FINAL.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S27,yes,clip S27_FINAL.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S28,yes,clip S28_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S29,yes,clip S29_take00_orphan.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S30,yes,clip S30_take01.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧（单人两张）,no
+S31,yes,clip S31_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S32,yes,clip S32_FINAL.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S33,yes,clip S33_FINAL.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S34,yes,clip S34_take01.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S35,yes,clip S35_take01.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,yes
+S36,yes,clip S36_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S37,yes,clip S37_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S38,yes,clip S38_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S39,yes,clip S39_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S40,yes,clip S40_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S41,yes,clip S41_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S42,yes,clip S42_take01.mp4 @0s,已生成动态，可只做微调或替换,需 END 帧,no
+S43,yes,clip S43_take01.mp4 @0s,已生成动态，可只做微调或替换,单帧即可,no
+S44,yes,片尾字卡,字卡，无需生成,不适用,no

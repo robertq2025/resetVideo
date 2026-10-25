@@ -1,0 +1,143 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>《重启》创作说明 / REBOOT — Creative Statement</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#d9d4c9}
+body{font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;color:#1b1d1f;-webkit-font-smoothing:antialiased}
+.page{width:210mm;height:297mm;margin:0 auto;background:#f7f2e7;position:relative;overflow:hidden}
+.hero{position:relative;height:88mm;overflow:hidden;background:#050608}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 52%;filter:saturate(.92) contrast(1.04)}
+.shade{position:absolute;inset:0;background:
+linear-gradient(90deg,rgba(4,6,9,.94) 0%,rgba(4,6,9,.72) 34%,rgba(4,6,9,.12) 72%,rgba(4,6,9,.05) 100%),
+linear-gradient(0deg,rgba(4,6,9,.92) 0%,transparent 58%)}
+.hero-copy{position:absolute;left:14mm;bottom:9mm;right:14mm;color:#f4efe4}
+.kicker{font-family:"Cascadia Mono",Consolas,monospace;font-size:6.8pt;letter-spacing:.28em;color:#e6a3a3;margin-bottom:3.2mm;text-transform:uppercase}
+.title-row{display:flex;align-items:flex-end;gap:7mm}
+.cn{font-family:"Noto Serif SC","Songti SC",serif;font-weight:600;font-size:45pt;line-height:.95;letter-spacing:.12em;margin:0;white-space:nowrap}
+.en{font-family:"Cascadia Mono",Consolas,monospace;font-size:8pt;letter-spacing:.52em;color:#b7c0c6;padding-bottom:2.2mm;white-space:nowrap}
+.hero-tag{margin-top:3.4mm;font-family:"Noto Serif SC",serif;font-size:9.2pt;line-height:1.7;color:#ded7c9;letter-spacing:.03em}
+.hero-tag b{color:#fff;font-weight:600}
+.hero-meta{position:absolute;right:14mm;top:9mm;text-align:right;font-family:"Cascadia Mono",Consolas,monospace;font-size:6.6pt;line-height:1.9;letter-spacing:.12em;color:#9aa3ad}
+.hero-meta b{color:#f4efe4;font-weight:500}
+
+.body{display:flex;gap:8mm;padding:9mm 14mm 0}
+.col-l{width:116mm}
+.col-r{width:58mm}
+.sec-k{font-family:"Cascadia Mono",Consolas,monospace;font-size:6.4pt;letter-spacing:.22em;color:#a33b3b;margin:0 0 1.6mm;text-transform:uppercase}
+.sec-k span{color:#8a8f92;margin-left:2mm;letter-spacing:.12em}
+h2{font-family:"Noto Serif SC",serif;font-size:15pt;font-weight:600;letter-spacing:.06em;margin:0 0 2.4mm;line-height:1.3}
+.rule{height:1px;background:#cfc6b5;margin:0 0 3.2mm}
+p{font-size:8.7pt;line-height:1.72;margin:0 0 2.6mm;color:#2c2f31}
+.lead{font-family:"Noto Serif SC",serif;font-size:10.2pt;line-height:1.75;color:#17191b;margin-bottom:3mm}
+.lead b{color:#a33b3b;font-weight:600}
+.quote{border-left:2px solid #2f7d55;padding:1.6mm 0 1.6mm 4mm;margin:3.2mm 0 3.4mm;font-family:"Noto Serif SC",serif;font-size:10.6pt;line-height:1.75;color:#1d2a22}
+.quote small{display:block;font-family:"Noto Sans SC",sans-serif;font-size:7.2pt;color:#6d746f;margin-top:1.4mm;letter-spacing:.02em}
+.syn{font-size:8.7pt;line-height:1.74;text-align:justify}
+.syn b{font-weight:600;color:#111}
+.nw{white-space:nowrap}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4mm;margin-top:3.2mm}
+.frames figure{margin:0}
+.frames img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:1mm;filter:saturate(.95)}
+.frames figcaption{font-family:"Cascadia Mono",Consolas,monospace;font-size:6pt;letter-spacing:.08em;color:#6f756f;margin-top:1.2mm}
+.note{font-size:7.9pt;line-height:1.65;color:#4f5558;border-top:1px solid #d4cbba;padding-top:2.4mm;margin-top:1mm}
+.note b{color:#a33b3b}
+
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.6mm;margin-bottom:4.6mm}
+.stat{background:#14181d;color:#efe9dd;padding:2.2mm 2.4mm 2.0mm;border-radius:1mm}
+.stat .n{font-family:"Cascadia Mono",Consolas,monospace;font-size:11.6pt;color:#6fe0a0;letter-spacing:.02em;line-height:1.1}
+.stat .l{font-size:6.3pt;color:#9aa3ad;letter-spacing:.08em;margin-top:1.1mm}
+.stat.red .n{color:#ffb3b3}
+
+.side h3{font-family:"Cascadia Mono",Consolas,monospace;font-size:6.3pt;letter-spacing:.2em;color:#a33b3b;margin:0 0 1.4mm;text-transform:uppercase}
+.side .rule{margin-bottom:2.4mm}
+.tools{font-size:7.4pt;line-height:1.62;color:#2c2f31}
+.tools b{font-weight:600;color:#111}
+.tools div{margin-bottom:1.1mm}
+.sources{font-size:7.1pt;line-height:1.58;color:#3d4245}
+.sources div{margin-bottom:1.2mm}
+.sources b{color:#111;font-weight:600}
+.sources .ai{background:#e9e1d1;border-left:2px solid #a33b3b;padding:2.2mm 2.6mm;margin-top:2.4mm;font-size:6.9pt;line-height:1.55;color:#3a2b2b}
+
+.foot{position:absolute;left:14mm;right:14mm;bottom:6mm;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #cfc6b5;padding-top:2.2mm;font-family:"Cascadia Mono",Consolas,monospace;font-size:6.1pt;letter-spacing:.11em;color:#6f756f}
+.foot .r{text-align:right}
+.foot b{color:#1b1d1f;font-weight:500}
+.green{color:#2f7d55}
+.red{color:#a33b3b}
+@media print{html,body{background:#fff}.page{margin:0;box-shadow:none}}
+</style></head>
+<body><div class="page">
+  <div class="hero">
+    <img src="../assets/keyframes/K07_two_green.png" alt="">
+    <div class="shade"></div>
+    <div class="hero-meta"><b>04:21</b><br>HAIZHOU · 2026<br>3'20" · 16:9 · 24FPS</div>
+    <div class="hero-copy">
+      <div class="kicker">Creative Statement / 创作说明</div>
+      <div class="title-row"><h1 class="cn">重启</h1><div class="en">REBOOT</div></div>
+      <div class="hero-tag">一座城市每天凌晨四点十七分重启一次。<br><b>今晚是最后一次手动重启，也是他们婚姻冷静期的最后一天。</b></div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="col-l">
+      <div class="sec-k">01 <span>THEME</span></div>
+      <h2>重启不是清空，是承认之后继续</h2>
+      <p class="lead">城市每天凌晨 <b>4:17</b> 重启一次；婚姻有一份 <b>30 天</b>的冷静期；陈默守了 <b><span class="nw">22 年</span></b>的夜班，守成了不回应、不改变的习惯。三个“重启”叠在同一夜。他最后按下的不是“重来”，是“交班”。</p>
+      <p>城市层面的重启：全城信号失效，必须有人下到路口，用一把物理钥匙把系统重新点亮。关系层面的重启：两人不是回到 18 年前，而是把“旧数据”保留下来，写进新系统。个人层面的重启：一个人承认自己扛不动了，把钥匙交出去。</p>
+      <div class="quote">“新系统会保留旧数据吗？”<br>“会。不然它不知道路该怎么走。”<small>题眼。表面问系统，实际问婚姻。</small></div>
+
+      <div class="sec-k">02 <span>SYNOPSIS</span></div>
+      <div class="rule"></div>
+      <p class="syn">海州，凌晨 4:17，最后一次人工交班。新系统“灵犀”提前切换，<b>047 号继电器</b>超时，全城信号熄灭。陈默赶到北站路口，遇见“灵犀”的总设计师林曦——也是他 <span class="nw">18 年前</span>在同一个路口遇见的人，离婚冷静期的最后一天。旧柜只认他的黄铜钥匙，新系统只认她的权限。两个人隔着一个打开的继电器柜，像隔着一张离婚协议。4:21，绿灯从路口出发，漫过全城。早上 6 点，粥铺。9 点的预约单还在桌上。她问：“新系统会保留旧数据吗？”他说：“会。不然它不知道路该怎么走。”</p>
+
+      <div class="sec-k">03 <span>WHY A STORY</span></div>
+      <div class="rule"></div>
+      <p class="note"><b>不是 MV，不是旁白散文。</b> 44 个镜头、72 句短对白、三幕七段；有欲望（守住最后一班/不面对 9 点）、障碍（系统崩溃 + 前妻出现）、回忆（伞与空屋）、选择（交钥匙/不去登记）、回落（粥铺与绿灯）。全片 3:20，净对白约 101 秒，其余交给画面和声音。</p>
+
+      <div class="sec-k">04 <span>CRAFT</span></div>
+      <div class="rule"></div>
+      <p class="note"><b>画面：</b>青蓝雨夜 + 钠灯暖橙 + 单点信号红；绿色只在 2:38 后出现，绿灯潮是全片唯一饱和峰值。<b>声音：</b>50Hz 城市心跳、三层雨、继电器；黑城 1.5 秒静音；钢琴=林曦，大提琴=陈默，合成器=城市。</p>
+
+    </div>
+
+    <div class="col-r side">
+      <div class="stats">
+        <div class="stat"><div class="n">3:20</div><div class="l">主片 / 200s</div></div>
+        <div class="stat"><div class="n">16:9</div><div class="l">1920×1080+</div></div>
+        <div class="stat"><div class="n">44</div><div class="l">SHOTS / 72 LINES</div></div>
+        <div class="stat red"><div class="n">1:55.5</div><div class="l">路演 / ≤2:00</div></div>
+      </div>
+
+      <h3>Tools / 工具</h3>
+      <div class="rule"></div>
+      <div class="tools">
+        <div><b>关键帧/参考图</b> Qoder ImageGen</div>
+        <div><b>视频</b> Qoder VideoGen（首帧驱动）</div>
+        <div><b>配音</b> Edge 神经网络语音（zh-CN）</div>
+        <div><b>配乐</b> 原创程序化合成（Python/numpy）</div>
+        <div><b>剪辑/调色/混音</b> Python + FFmpeg</div>
+        <div><b>字幕/分镜</b> Python + 人工校对</div>
+        <div><b>字卡/海报</b> HTML/CSS + Edge</div>
+      </div>
+
+      <div style="height:4mm"></div>
+      <h3>Sources / 来源</h3>
+      <div class="rule"></div>
+      <div class="sources">
+        <div><b>画面</b> Qoder ImageGen / VideoGen 原创生成；无第三方影像素材。</div>
+        <div><b>音乐</b> 原创程序化配乐，6 段 Cue；脚本与日志见交付包。</div>
+        <div><b>音效</b> 程序合成雨声、电流与继电器；无第三方采样。</div>
+        <div><b>字体</b> Noto Serif SC / Noto Sans SC / JetBrains Mono（SIL OFL 1.1）。</div>
+        <div class="ai"><b>AI 披露</b><br>本片画面与配音由 AI 生成；配乐与音效为原创程序化合成。人物、地名、事件均为虚构，不涉及真实个人。片尾与作品页均有显著标识。</div>
+      </div>
+
+      <div style="height:3.4mm"></div>
+      <div class="note" style="border-top:none;padding-top:0;margin-top:0;font-size:7pt">修好这座城市，只需要四分钟；<br>修好两个人，他们用了十八年。</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div><b>《重启》/ REBOOT</b> · 2026 · HAIZHOU</div>
+    <div class="r"><span class="red">04:17</span> → <span class="green">04:21</span> · <b>1 / 1</b><br>AI VISUALS &amp; VOICE · ORIGINAL SCORE</div>
+  </div>
+</div></body></html>

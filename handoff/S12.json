@@ -1,0 +1,95 @@
+{
+  "shot": "S12",
+  "act": "B",
+  "act_name": "最后一班",
+  "slug": "进度条",
+  "start_sec": 53.0,
+  "duration_sec": 3.5,
+  "size": "特写",
+  "lens": "100mm macro",
+  "location": "系统屏幕",
+  "chars": [],
+  "desc": "新系统进度条从98%走到100%。",
+  "dialogue": [],
+  "camera": {
+    "move": "固定，轻推",
+    "motivation": "机器接管的时间压力，推近=逼近",
+    "recipe": "起幅屏体全貌，3.5 秒匀速推到数字区，落幅 98% 占画面 1/2",
+    "scale_device": "无",
+    "execution_path": "首尾帧 + 后期贴 G05 三态",
+    "end_state": "100%，人工席位注销",
+    "fallback": "固定 + 后期数字推",
+    "frame_pairing": "需 END 帧"
+  },
+  "sound": {
+    "sfx": "电子提示音、电流升高。",
+    "music": "Cue 1",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "",
+    "audio_track": null,
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [
+    {
+      "plate": "OVERLAY/G05_progress_98.png",
+      "when": "0.0–1.2s",
+      "how": "进度条三态之一，按 1.2/1.2/1.1s 顺序替换"
+    },
+    {
+      "plate": "OVERLAY/G05_progress_99.png",
+      "when": "1.2–2.4s",
+      "how": "同上"
+    },
+    {
+      "plate": "OVERLAY/G05_progress_100.png",
+      "when": "2.4–3.5s",
+      "how": "同上；屏幕反光用原片高光层压回"
+    }
+  ],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "画面事实（本镜）：新系统进度条从98%走到100%。"
+  ],
+  "reference_images": [
+    "REF/SCENE_SCREEN.png"
+  ],
+  "continuity_locks": null,
+  "first_frame": {
+    "file": "S12_frame.png",
+    "source": "clip S12_FINAL.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": "S12_end.png",
+    "state": "100%，人工席位注销",
+    "note": "轻推落幅：进度条 100% 占画面约一半，人工席位注销",
+    "method": "screen"
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。抽象的系统屏幕特写：深色UI、进度条、错误色块、握手确认框，无可读文字（所有文字后期合成），屏幕表面有雨滴与反光。继电器柜内黑色控制盒屏幕的极特写，抽象UI进度条走到100%，青白色光，无可读文字，屏幕表面有雨滴与一只眼睛的倒影，浅景深，紧张。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. macro of an abstract system screen: dark UI, progress bar, error blocks, handshake confirmation panel, no readable text (all text added in post), rain drops and reflections on the glass. macro of a black control screen inside the relay cabinet, an abstract UI progress bar reaching 100%, cyan-white glow, no readable text, rain drops and a reflected eye on the glass, shallow depth of field, tense. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定极特写，进度条从98%走到100%，屏幕轻微闪烁，倒影中的眼睛眨一下，3.5秒。 结束状态：100%，人工席位注销 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static macro, the progress bar fills from 98% to 100%, the screen flickers slightly, the reflected eye blinks, 3.5 seconds. End state: 100%，人工席位注销 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

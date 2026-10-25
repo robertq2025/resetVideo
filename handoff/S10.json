@@ -1,0 +1,114 @@
+{
+  "shot": "S10",
+  "act": "B",
+  "act_name": "最后一班",
+  "slug": "旧柜",
+  "start_sec": 43.0,
+  "duration_sec": 5.0,
+  "size": "特写",
+  "lens": "50mm",
+  "location": "继电器柜",
+  "chars": [],
+  "desc": "他打开旧柜，手指停在一块写着“林曦”的褪色胶带上。",
+  "dialogue": [
+    {
+      "speaker": "老周 电台",
+      "zh": "小陈，新系统提前切了，你那边盯着点。",
+      "en": "Xiao Chen, the new system switched early. Watch it.",
+      "in_shot_at": 0.3,
+      "placed_at": 0.3,
+      "placed_dur": 2.44,
+      "placed_text": "小陈，新系统提前切了，你那边盯着点。"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "谁让切的？",
+      "en": "Who authorized it?",
+      "in_shot_at": 2.9,
+      "placed_at": 2.9,
+      "placed_dur": 0.85,
+      "placed_text": "谁让切的？"
+    },
+    {
+      "speaker": "老周 电台",
+      "zh": "系统自己。",
+      "en": "The system did.",
+      "in_shot_at": 3.9,
+      "placed_at": 3.9,
+      "placed_dur": 0.86,
+      "placed_text": "系统自己。"
+    }
+  ],
+  "camera": {
+    "move": "固定，轻微横移",
+    "motivation": "他回到自己的工位，横移=巡视",
+    "recipe": "起幅柜门铰链，2 秒匀速横移（trucking）至褪色胶带停住",
+    "scale_device": "前景遮挡（柜门边缘）",
+    "execution_path": "首尾帧",
+    "end_state": "手指停在胶带上（文字后期贴 G04）",
+    "fallback": "固定机位 + 两次剪辑",
+    "frame_pairing": "需 END 帧"
+  },
+  "sound": {
+    "sfx": "柜门铰链、雨滴铁皮、电台电流。",
+    "music": "Cue 1",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "不做唇形：对白按画外处理，只给眼神/呼吸/手部动作（全片默认策略）",
+    "audio_track": "S10_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [
+    {
+      "plate": "OVERLAY/G04_tape_linxi.png",
+      "when": "落幅",
+      "how": "柜门内侧褪色胶带，不透明度 55%，1.5px 模糊 + 轻噪点"
+    }
+  ],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "画面事实（本镜）：他打开旧柜，手指停在一块写着“林曦”的褪色胶带上。"
+  ],
+  "reference_images": [
+    "REF/SCENE_CABINET.png",
+    "REF/char_chenmo_ref.png"
+  ],
+  "continuity_locks": null,
+  "first_frame": {
+    "file": "S10_frame.png",
+    "source": "clip S10_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": "S10_end.png",
+    "state": "手指停在胶带上（文字后期贴 G04）",
+    "note": "横移落幅：褪色胶带“林曦”完整入画（底板取 K03 柜内）",
+    "method": "cabinet_tape"
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。打开的1990年代继电器柜内部，密集手工标签、绝缘胶布、旧继电器，一只男人的手指停在一块褪色胶带上（手写字不可读，后期合成“林曦”），琥珀工作灯，雨从柜门滴下，灰尘。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. inside an open 1990s relay cabinet, dense hand-labeled wires, electrical tape, old relays, a man's finger pausing on a faded tape label (handwriting unreadable, 'Lin Xi' added in post), amber work light, rain dripping from the door, dust. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定特写，手指沿电线缓慢移动到胶带标签，停住，雨滴落下，5秒。 结束状态：手指停在胶带上（文字后期贴 G04） 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static close-up, the fingers move slowly along the wires to the tape label and stop, a drop falls, 5 seconds. End state: 手指停在胶带上（文字后期贴 G04） NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

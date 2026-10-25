@@ -1,0 +1,67 @@
+# 《重启》风格指南 / STYLE GUIDE
+# 教材 book/06 §2.5 与 CHECKLISTS G2-04 要求：全片风格帧 + 色板 + 可量化的颗粒/暗角上限。
+# 数值与 build_assembly.py 的 GRADE 常量一致，改一处必须同步另一处。
+
+artifact_type: "style"
+project_id: "REBOOT"
+version: "v1.1"
+status: "approved"
+date: "2026-10-24"
+
+canvas:
+  aspect: "16:9"
+  resolution: "1920x1080"
+  fps: 24
+  safe_area: {title: "5%", subtitle_bottom: "字幕基线距底 64px"}
+
+look:
+  grade_formula: "eq=contrast=1.045:saturation=0.95:brightness=-0.012,vignette=PI/4.8,noise=alls=2.2:allf=t+u"
+  limits:                       # 教材明令禁止“过度青橙/颗粒/暗角/磨皮”，这里给出可核查上限
+    contrast_max: 1.06
+    saturation_min: 0.90        # 允许降饱和，不允许把青色推爆
+    vignette_max: "PI/4.5"      # 当前 PI/4.8，比上限更轻
+    grain_max: "alls=3.0"       # 当前 2.2
+    skin_protection: "肤色优先于风格：近景不得出现绿脸/塑料脸，不得磨皮去毛孔"
+  palette_by_act:
+    A_序:      {base: "#0d1a20", accent_warm: "#e0a34b", accent_red: "#c0392b", note: "青蓝雨夜 + 单点钠灯暖"}
+    B_最后一班: {base: "#12202a", accent_warm: "#f2b26b", accent_red: "#c0392b", note: "柜内琥珀是唯一暖光"}
+    C_黑城:    {base: "#05070a", accent_warm: "#000000", accent_red: "#ff453a", note: "抽掉城市底噪，只留红屏与雨"}
+    D_同路人:  {base: "#141f28", accent_warm: "#e0a34b", accent_red: "#a3372c", note: "两人首次同框，暖光回到画面"}
+    E_旧继电器: {base: "#1a2129", accent_warm: "#f2b26b", accent_red: "#8b2f26", note: "记忆段用更暖的 2200K"}
+    F_绿灯波:  {base: "#0f2a2a", accent_warm: "#f2c078", accent_green: "#57e389", note: "全片唯一饱和峰：绿灯"}
+    G_旧数据:  {base: "#2a2f33", accent_warm: "#f2c078", accent_green: "#57e389", note: "清晨，暖灯与天光并置"}
+  single_accent_rule: "红围巾是全片唯一高饱和暖色；绿灯只在 2:38 之后出现。二者不得提前抢戏。"
+
+composition:
+  rules:
+    - "人物眼线在画面上 1/3；对话留视线空间（look room）"
+    - "陈默偏画左、林曦偏画右，与路口轴线同构，全片不越轴（唯一例外 S29 火花）"
+    - "柜体作为画面中缝：两人隔着柜子＝隔着一张离婚协议"
+    - "大全景里人物不超过画面高度 1/10（尺度对比）"
+  forbidden:
+    - "不得用对称韦斯安德森式构图（本片是纪实感霓虹雨夜）"
+    - "不得用鱼眼/超广角拍脸"
+
+typography:
+  title: {font: "Noto Serif SC", weight: 600, tracking: "0.16em"}
+  body: {font: "Noto Sans SC", size_subtitles_px: 26, margin_v_px: 64}
+  data: {font: "JetBrains Mono", usage: "时间码、04:17、04:21、日志编号"}
+  license: "SIL Open Font License 1.1"
+  subtitle_rule: "一行不超过 16 个汉字；超过必须断成两行或两条字幕（见 08_剪辑交付.md）"
+
+motion:
+  still_frame_max_sec: 8          # 超过 8 秒必须有运镜或人物动作，否则拆镜
+  push_in_max: "10% 每秒不超过 2%"
+  dissolve: "禁止使用叠化做转场（教材硬规则）；只用硬切、黑场、声音先入"
+
+sound_signature:
+  city_heartbeat_hz: 50
+  music_motif: {piano: "林曦", cello: "陈默", pulse: "城市"}
+  loudness_target_lufs: -16
+  current_mix: {main: "-17.1 LUFS peak -0.9 dBFS", roadshow: "-15.8 LUFS peak -1.1 dBFS"}  # 由 tools/roadshow_manifest.py 与 ebur128 实测
+
+ai_disclosure:
+  required: "AI 生成标识必须持续可见，不能只放片尾（book/10 §三.5）"
+  placement: "片头 3 秒角标 + 全片左下常驻小字 + 片尾整屏 + 作品页 + 一页说明"
+  text_zh: "本片画面与配音由 AI 生成 · 配乐与音效为原创程序化合成"
+  text_en: "AI-GENERATED VISUALS & VOICE · ORIGINAL PROCEDURAL SCORE"

@@ -1,0 +1,107 @@
+{
+  "shot": "S01",
+  "act": "A",
+  "act_name": "序 · 4:17",
+  "slug": "红点",
+  "start_sec": 0.0,
+  "duration_sec": 5.0,
+  "size": "特写",
+  "lens": "100mm macro",
+  "location": "继电器柜",
+  "chars": [],
+  "desc": "全黑中一点暗红LED一明一暗，雨水沿铁皮滴下。",
+  "dialogue": [
+    {
+      "speaker": "陈默 VO",
+      "zh": "海州每天凌晨四点十七分，换一次心跳。",
+      "en": "In Haizhou, the city's heart changes beat at 4:17 every morning.",
+      "in_shot_at": 0.8,
+      "placed_at": 0.8,
+      "placed_dur": 3.66,
+      "placed_text": "海州每天凌晨四点十七分，换一次心跳。"
+    }
+  ],
+  "camera": {
+    "move": "固定，极缓推近",
+    "motivation": "让观众相信城市有心跳，越慢越像生理节律",
+    "recipe": "起幅 LED 在右下 1/3，5 秒匀速推近 6%，落幅 LED 居中偏上",
+    "scale_device": "尺度对比（黑暗吞掉画面其余部分）",
+    "execution_path": "纯提示词（幅度极小）",
+    "end_state": "LED 第二次暗下，画面接近全黑",
+    "fallback": "完全固定 + 后期数字推 3%",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "近雨打铁皮、继电器轻嗒、城市低频。",
+    "music": "Cue 1",
+    "transition": "黑场淡入"
+  },
+  "lipsync": {
+    "policy": "不做唇形：对白按画外处理，只给眼神/呼吸/手部动作（全片默认策略）",
+    "audio_track": "S01_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "道具：047 继电器红 LED",
+    "不可变：画面 90% 为黑",
+    "不可变：唯一光源是暗红 LED",
+    "不可变：雨从柜门边缘滴下"
+  ],
+  "reference_images": [
+    "REF/SCENE_CABINET.png"
+  ],
+  "continuity_locks": {
+    "shot_id": "S01",
+    "character": [],
+    "location": [
+      "CABINET"
+    ],
+    "props": [
+      "047 继电器红 LED"
+    ],
+    "screen_direction": [],
+    "must_not_change": [
+      "画面 90% 为黑",
+      "唯一光源是暗红 LED",
+      "雨从柜门边缘滴下"
+    ]
+  },
+  "first_frame": {
+    "file": "S01_frame.png",
+    "source": "clip S01_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "LED 第二次暗下，画面接近全黑",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。北站路口打开的旧继电器柜：1990年代铁皮柜体，密密麻麻的手工标签与绝缘胶布，旧继电器，柜内一盏琥珀色工作灯，雨从柜门边缘滴下，灰尘与铜锈，旁边是新的黑色系统控制盒。继电器柜内部极特写，黑暗中一颗暗红LED像心跳一样明暗，雨水沿生锈铁皮边缘滴落，细密水珠，浅景深，画面其余部分几乎全黑，安静而不安。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. the open 1990s relay cabinet at the junction: rusted steel box, dense hand-labeled wires and electrical tape, old relays, a single amber work light inside, rain dripping from the open door, dust and copper rust, a new black system control box beside it. extreme close-up inside a rusty relay cabinet, a single dim red LED pulsing like a heartbeat in near-total darkness, rain dripping from the rusted metal edge, fine water droplets, shallow depth of field, the rest of the frame almost black, quiet and ominous. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。镜头极缓推近红点，雨滴落下，LED明暗一次，画面稳定，无镜头抖动，5秒。 结束状态：LED 第二次暗下，画面接近全黑 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. slow push-in on the red LED, rain drips, the LED pulses once, stable camera, no shake, 5 seconds. End state: LED 第二次暗下，画面接近全黑 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}

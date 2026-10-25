@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>重启 · End Card</title><style>
+html,body{margin:0;width:1920px;height:1080px;background:#050608;overflow:hidden}
+.stage{position:relative;width:1920px;height:1080px;background:
+radial-gradient(700px 420px at 50% 115%,rgba(225,75,75,.16),transparent 65%),
+radial-gradient(520px 340px at 82% 8%,rgba(87,227,137,.07),transparent 70%),
+linear-gradient(180deg,#040507 0%,#090c11 55%,#050608 100%);}
+.grain{position:absolute;inset:0;background-image:repeating-linear-gradient(105deg,rgba(255,255,255,.035) 0 1px,transparent 1px 6px);opacity:.35;mix-blend-mode:screen}
+.vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 42%,rgba(0,0,0,.72) 100%)}
+.dot{position:absolute;border-radius:50%;filter:blur(1px)}
+.d1{width:10px;height:10px;background:#e14b4b;left:218px;top:212px;box-shadow:0 0 26px #e14b4b}
+.d2{width:8px;height:8px;background:#e0a34b;left:1704px;top:846px;box-shadow:0 0 22px #e0a34b;opacity:.8}
+.d3{width:9px;height:9px;background:#57e389;left:1640px;top:214px;box-shadow:0 0 24px #57e389;opacity:.7}
+.timecode{position:absolute;right:92px;top:74px;font-family:"JetBrains Mono",Consolas,monospace;font-size:22px;letter-spacing:.16em;color:#e14b4b}
+.rule{position:absolute;left:50%;top:520px;width:260px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,#4a535e,transparent)}
+.title{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);text-align:center;white-space:nowrap}
+.title .cn{font-family:"Noto Serif SC","Songti SC",serif;font-size:236px;font-weight:600;letter-spacing:.16em;color:#f3efe5;text-shadow:0 6px 50px rgba(0,0,0,.65)}
+.title .cn span{display:inline-block}
+.title .cn .a{animation:slideL 1.8s cubic-bezier(.22,1,.36,1) both}
+.title .cn .b{animation:slideR 1.8s cubic-bezier(.22,1,.36,1) both}
+.title .en{margin-top:26px;font-family:"JetBrains Mono",Consolas,monospace;font-size:26px;letter-spacing:.82em;color:#9aa3ad;animation:fade 2.2s .5s both}
+.title .sub{margin-top:18px;font-family:"Noto Sans SC",sans-serif;font-size:15px;letter-spacing:.34em;color:#69727d;animation:fade 2.2s .9s both}
+@keyframes slideL{from{opacity:0;transform:translateX(-90px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideR{from{opacity:0;transform:translateX(90px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.end{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;white-space:nowrap}
+.end .big{font-family:"JetBrains Mono",Consolas,monospace;font-size:92px;letter-spacing:.12em;color:#57e389;text-shadow:0 0 36px rgba(87,227,137,.25);animation:fade 1.8s both}
+.end .l1{margin-top:20px;font-family:"Noto Serif SC",serif;font-size:44px;letter-spacing:.24em;color:#eee9de;animation:fade 1.8s .25s both}
+.end .l2{margin-top:16px;font-family:"Noto Sans SC",sans-serif;font-size:20px;letter-spacing:.3em;color:#8d968f;animation:fade 1.8s .45s both}
+.end .en{margin-top:44px;font-family:"JetBrains Mono",Consolas,monospace;font-size:15px;letter-spacing:.75em;color:#4d565f;animation:fade 1.8s .7s both}
+.ai{position:absolute;left:50%;bottom:42px;transform:translateX(-50%);font-family:"Noto Sans SC",sans-serif;font-size:13px;letter-spacing:.14em;line-height:1.9;color:#8d968f;white-space:normal;text-align:center;width:88%}
+body.static *{animation:none!important;opacity:1!important}
+</style></head>
+<body><div class="stage"><div class="grain"></div><div class="vignette"></div>
+<div class="dot d1" style="left:1732px;top:886px;background:#57e389;box-shadow:0 0 24px #57e389"></div>
+<div class="end"><div class="big">04:21</div><div class="l1">重启完成</div><div class="l2">旧数据已保留</div><div class="en">REBOOT</div></div>
+<div class="ai">本片画面与配音由 AI 生成 · 配乐与音效为原创程序化合成<br>AI-GENERATED VISUALS &amp; VOICE · ORIGINAL PROCEDURAL SCORE</div>
+</div><script>if(location.search.indexOf('static')>=0)document.body.classList.add('static');</script></body></html>

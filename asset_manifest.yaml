@@ -1,0 +1,154 @@
+# 《重启》资产清单 / ASSET MANIFEST
+# 教材 templates/asset_manifest.yaml 的形状：status 走 draft → review → approved → locked。
+# 已批准资产不得覆盖；要改就出新版本，旧版标 deprecated。
+# 本文件由人工维护（V1.1 起），文件哈希见 exports/REBOOT_assets_manifest.csv。
+
+artifact_type: "assets"
+project_id: "REBOOT"
+version: "v1.1"
+date: "2026-10-24"
+
+characters:
+  - id: "CHAR_CHENMO"
+    name: "陈默"
+    version: "v1"
+    status: "approved"
+    refs:
+      front: "assets/characters/char_chenmo_ref.png"
+      side: "MISSING（待生成，提示词见 15_角色参考页.md）"
+      back: "MISSING（待生成）"
+      closeup: "assets/characters/CHAR_CHENMO_sheet.png（含 S11 正面3/4 与 S23 正侧面成片帧）"
+      expressions: "MISSING（待生成）"
+      turnaround_sheet_prompt: "见 15_角色参考页.md §陈默"
+    locks:
+      hair: "极短寸头，两鬓灰白，头顶偏深"
+      wardrobe: "深藏蓝工装夹克 + 两条银色反光条 + 深色衬衫"
+      accessory: "牛皮绳挂单把黄铜钥匙，锁骨下方"
+      skin: "偏深粗糙、油光、右颊 2cm 旧疤、稀疏胡髭 + 下巴一小撮"
+    approved_by: "本团队"
+    approved_at: "2026-10-24"
+    note: "脸的对齐基准是 shots/S11 take01（成片），不是定妆图；S23 发型轮廓偏长，重做时以 S11 为准。"
+
+  - id: "CHAR_LINXI"
+    name: "林曦"
+    version: "v1"
+    status: "approved"
+    refs:
+      front: "assets/characters/char_linxi_ref.png"
+      side: "MISSING（待生成）"
+      back: "MISSING（待生成）"
+      closeup: "assets/characters/CHAR_LINXI_sheet.png（含 S21 正面3/4 与 S23 正侧面成片帧）"
+      expressions: "MISSING（待生成）"
+    locks:
+      hair: "黑色短发，耳后收拢，发尾到耳下"
+      wardrobe: "深炭灰羊毛长大衣 + 黑色高领 + 铁锈红羊毛围巾（绕两圈）"
+      accessory: "小珍珠耳钉；左手无名指细银戒"
+      skin: "自然素净，左眼下方一颗小痣"
+    approved_by: "本团队"
+    approved_at: "2026-10-24"
+
+locations:
+  - id: "LOC_JUNCTION"
+    name: "海州北站路口"
+    version: "v1"
+    status: "approved"
+    refs:
+      wide: "assets/keyframes/K01_junction.png"
+      reverse: "MISSING（待生成）"
+      floorplan: "assets/scenes/SCENE_JUNCTION.png"
+    locks: {space: "六车道 + 1990s 人行天桥 + 信号塔", light: "钠灯 2000K + 信号灯红/绿", color: "#0d1a20 / #e0a34b / #57e389"}
+  - id: "LOC_CABINET"
+    name: "旧继电器柜"
+    version: "v1"
+    status: "approved"
+    refs: {wide: "assets/keyframes/K03_cabinet.png", reverse: "MISSING", floorplan: "assets/scenes/SCENE_CABINET.png"}
+    locks: {space: "1.2m 铁皮柜，柜门向右开，右侧是新控制盒", light: "柜内琥珀工作灯 2600K 为唯一实用光", color: "#2a2118 / #f2b26b / #c0392b"}
+  - id: "LOC_CONTROL_ROOM"
+    name: "值班室"
+    version: "v1"
+    status: "review"
+    refs: {wide: "MISSING（待生成全景板）", reverse: "MISSING", floorplan: "assets/scenes/SCENE_CONTROL_ROOM.png"}
+    locks: {space: "6㎡，木桌靠窗，墙上电子钟", light: "绿色台灯 2900K + 窗外冷蓝", color: "#141b18 / #3fae6a / #ff3b30"}
+  - id: "LOC_VAN"
+    name: "工程车驾驶室"
+    version: "v1"
+    status: "review"
+    refs: {wide: "MISSING（待生成全景板）", reverse: "MISSING", floorplan: "assets/scenes/SCENE_VAN.png"}
+    locks: {space: "副驾视角，仪表台 + 后视镜婚戒", light: "扫过街灯 + 仪表暖光", color: "#10161c / #6f8ea8 / #e0a34b"}
+  - id: "LOC_SIGNAL_BLDG"
+    name: "信号楼外"
+    version: "v1"
+    status: "review"
+    refs: {wide: "MISSING", reverse: "MISSING", floorplan: "assets/scenes/SCENE_SIGNAL_BLDG.png"}
+    locks: {space: "两层混凝土小楼 + 旁边新机房", light: "二楼暖窗 2700K vs 机房幽蓝 6500K", color: "#2b2f33 / #e0a34b / #4f7fa8"}
+  - id: "LOC_BILLBOARD"
+    name: "天桥下巨屏"
+    version: "v1"
+    status: "review"
+    refs: {wide: "MISSING", reverse: "MISSING", floorplan: "assets/scenes/SCENE_BILLBOARD.png"}
+    locks: {space: "桥下，巨屏朝南，地面积水", light: "屏体冷光（内容贴 G03）", color: "#0b1114 / #57e389 / #c0392b"}
+  - id: "LOC_MEMORY_JUNCTION"
+    name: "记忆·路口（18 年前）"
+    version: "v1"
+    status: "approved"
+    refs: {wide: "assets/keyframes/K09_umbrella.png", reverse: "MISSING", floorplan: "assets/scenes/SCENE_MEMORY_JUNCTION.png"}
+    locks: {space: "同一路口，更窄更暖", light: "更暖的 2200K 钠灯", color: "#3a2b1e / #f0b070 / #c0392b"}
+  - id: "LOC_MEMORY_HOME"
+    name: "记忆·旧公寓"
+    version: "v1"
+    status: "review"
+    refs: {wide: "MISSING", reverse: "MISSING", floorplan: "assets/scenes/SCENE_MEMORY_HOME.png"}
+    locks: {space: "客厅一角，门在画左", light: "窗外冷蓝为唯一光源", color: "#171d24 / #4a6d8c / #8b6f52"}
+  - id: "LOC_STALL"
+    name: "天桥下粥铺"
+    version: "v1"
+    status: "approved"
+    refs: {wide: "assets/keyframes/K08_stall.png", reverse: "MISSING", floorplan: "assets/scenes/SCENE_STALL.png"}
+    locks: {space: "木桌 + 塑料凳 + 裸灯泡", light: "裸灯泡 2400K + 清晨天光", color: "#f2c078 / #2a2f33 / #e6ded0"}
+  - id: "LOC_SCREEN"
+    name: "系统界面"
+    version: "v1"
+    status: "approved"
+    refs: {wide: "MISSING（屏幕留空板）", reverse: "MISSING", floorplan: "assets/scenes/SCENE_SCREEN.png"}
+    locks: {space: "平板与柜内小屏特写", light: "屏幕自发光", color: "#05090d / #57e389 / #ff453a / #e0a34b"}
+
+props:
+  - {id: "PROP_KEY",    name: "黄铜钥匙",   version: "v1", status: "approved", refs: {front: "assets/props/PROP_KEY.png"},    locks: {state: "颈上→掌心→锁孔→交到她手", holder: "陈默 → 林曦（S42）"}}
+  - {id: "PROP_SCARF",  name: "红围巾",     version: "v1", status: "approved", refs: {front: "assets/props/PROP_SCARF.png"},  locks: {state: "记忆里更鲜亮 / 现在发暗", holder: "林曦"}}
+  - {id: "PROP_TABLET", name: "加固平板",   version: "v1", status: "approved", refs: {front: "assets/props/PROP_TABLET.png"}, locks: {state: "5 种屏幕状态，全部后期贴图", holder: "林曦"}}
+  - {id: "PROP_LOG",    name: "值班日志",   version: "v1", status: "approved", refs: {front: "assets/props/PROP_LOG.png"},    locks: {state: "04:17 正常 / 047 那行 / 机器不记的事我记", holder: "陈默"}}
+  - {id: "PROP_SLIP",   name: "复婚预约单", version: "v1", status: "approved", refs: {front: "assets/props/PROP_SLIP.png"},   locks: {state: "仪表台→空屋→粥铺→收进内袋（同一张）", holder: "林曦（未签字）"}}
+  - {id: "PROP_PHOTO",  name: "倒扣结婚照", version: "v1", status: "review",   refs: {front: "assets/props/PROP_PHOTO.png"},  locks: {state: "正面朝外 → 倒扣", holder: "两人"}}
+  - {id: "PROP_RING",   name: "后视镜婚戒", version: "v1", status: "draft",    refs: {front: "MISSING（S07 未生成，无实拍参考）"}, locks: {state: "挂着轻晃", holder: "陈默（车内）"}}
+
+overlays:
+  dir: "assets/overlays"
+  count: 14
+  spec: "assets/overlays/OVERLAYS.md"
+  rule: "画面内所有文字/屏幕/招牌/纸张一律后期贴图，生成时留空"
+
+keyframes:
+  dir: "assets/keyframes"
+  approved: ["K01_junction", "K02_chen_close", "K03_cabinet", "K04_lin_close", "K05_two_shot",
+             "K06_green_wave", "K07_two_green", "K08_stall", "K09_umbrella"]
+  end_frames_needed: ["S04", "S08", "S09", "S10", "S12", "S15", "S22", "S27", "S30", "S32", "S34", "S35", "S42"]
+
+derived_frames:
+  dir: "assets/keyframes/derived"
+  count: 29
+  builder: "build_frames.py"
+  provenance: "exports/REBOOT_derived_frames.csv"
+  method:
+    clip_crop: "从已交付镜头按 ≤2.2× 放大裁切（同脸/同衣/同光），可加 red/green/cold/warm 重打光"
+    overlay_plate: "用 assets/overlays 的真实文字贴图合成暗背景底板（屏幕与纸面类镜头）"
+  covers: ["S01", "S02", "S04", "S06", "S07", "S08", "S09", "S12", "S13", "S15", "S16", "S17",
+           "S19", "S20", "S22", "S24", "S25", "S26", "S27", "S29", "S30", "S31", "S33", "S34",
+           "S36", "S37", "S41", "S42", "S43"]
+  note: "作用是让 3:20 预视不再出现灰色占位卡，并给外部工具一张可直接用的首帧；
+         这些帧不是最终画面，镜头生成后应替换。"
+
+clips_generated:
+  dir: "shots"
+  count: 11
+  ids: ["S03", "S11", "S14", "S18", "S21", "S23", "S28", "S32", "S35", "S38", "S39"]
+  log: "exports/REBOOT_generation_log.csv（含 job_id 与 SHA-256）"

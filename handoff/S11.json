@@ -1,0 +1,127 @@
+{
+  "shot": "S11",
+  "act": "B",
+  "act_name": "最后一班",
+  "slug": "脸",
+  "start_sec": 48.0,
+  "duration_sec": 5.0,
+  "size": "近景",
+  "lens": "85mm",
+  "location": "北站路口",
+  "chars": [
+    "CHEN"
+  ],
+  "desc": "雨从颊上旧疤流下，他不动；电台问林工在不在。",
+  "dialogue": [
+    {
+      "speaker": "老周 电台",
+      "zh": "林工在不在？",
+      "en": "Is Engineer Lin there?",
+      "in_shot_at": 0.3,
+      "placed_at": 0.3,
+      "placed_dur": 0.94,
+      "placed_text": "林工在不在？"
+    },
+    {
+      "speaker": "陈默",
+      "zh": "不在。",
+      "en": "No.",
+      "in_shot_at": 1.7,
+      "placed_at": 1.7,
+      "placed_dur": 0.42,
+      "placed_text": "不在。"
+    }
+  ],
+  "camera": {
+    "move": "固定",
+    "motivation": "他的第一张正脸必须静止，让观众记住这张脸",
+    "recipe": "固定 85mm，只有呼吸与雨，不做推拉",
+    "scale_device": "剪影逆光（背后钠灯）",
+    "execution_path": "首帧驱动（K02）",
+    "end_state": "视线从远处移向柜体",
+    "fallback": "脸漂移则缩到 4 秒后切走",
+    "frame_pairing": "单帧即可"
+  },
+  "sound": {
+    "sfx": "雨、电台静默。",
+    "music": "Cue 1",
+    "transition": "切"
+  },
+  "lipsync": {
+    "policy": "可唇形（“不在。”只有 2 字）或直接改画外；正脸近景，唇形一崩就回退画外",
+    "audio_track": "S11_vo.wav",
+    "rule": "先按无口型生成，再只修必要镜头；唇形一崩就回退画外",
+    "tools": "Hedra / Runway Act-One / 可灵对口型均可；一次只处理一张脸，输出 ≥1080p，回贴原片。唇形导致脸变形就放弃唇形改画外——观众对画外音的容忍度远高于假脸。"
+  },
+  "text_overlays": [],
+  "invariants": [
+    "城市：海州（虚构），中国北方地级市，1990s 基础设施 + 2026 新系统",
+    "故事时间：04:12 → 06:05，同一夜到清晨",
+    "陈默服装：深藏蓝工装夹克 + 两条银色反光条 + 深色衬衫 + 牛皮绳挂单把黄铜钥匙（锁骨下方）",
+    "天气：暴雨（04:12–04:35）→ 雨渐弱（04:35–05:20）→ 雨后（06:00）",
+    "文字规则：所有屏幕、纸张、招牌文字后期贴图（见 assets/overlays/OVERLAYS.md），生成时留空",
+    "脸基准：陈默以 shots/S11 为基准；林曦以 shots/S21 与 shots/S23 为基准",
+    "道具：黄铜钥匙（颈上）",
+    "不可变：右颊 2cm 旧疤",
+    "不可变：稀疏胡髭 + 下巴一小撮",
+    "不可变：两鬓灰白寸头",
+    "不可变：反光条在胸前两侧",
+    "不可变：背景钠灯与红灯位置"
+  ],
+  "reference_images": [
+    "REF/FACE_CHEN_S11.png",
+    "REF/PROP_KEY.png",
+    "REF/SCENE_JUNCTION.png",
+    "REF/char_chenmo_ref.png"
+  ],
+  "continuity_locks": {
+    "shot_id": "S11",
+    "character": [
+      "陈默"
+    ],
+    "location": [
+      "JUNCTION"
+    ],
+    "props": [
+      "黄铜钥匙（颈上）"
+    ],
+    "must_not_change": [
+      "右颊 2cm 旧疤",
+      "稀疏胡髭 + 下巴一小撮",
+      "两鬓灰白寸头",
+      "反光条在胸前两侧",
+      "背景钠灯与红灯位置"
+    ]
+  },
+  "first_frame": {
+    "file": "S11_frame.png",
+    "source": "clip S11_take01.mp4 @0s",
+    "origin": null,
+    "resolution": "1920x1080",
+    "status": "已生成动态，可只做微调或替换"
+  },
+  "end_frame": {
+    "file": null,
+    "state": "视线从远处移向柜体",
+    "note": "不需要，单帧驱动即可",
+    "method": null
+  },
+  "prompts": {
+    "image_zh": "电影级实拍感，16:9，4K，ARRI Alexa 35 拍摄，Cooke S4 镜头，浅景深，自然胶片颗粒，轻微光晕，雨夜中国沿海城市，青蓝色阴影，钠灯暖橙，唯一的饱和红来自信号灯，绿色只在重启后出现，克制的黑色电影式爱情剧情，真实皮肤质感，无文字，无水印，无logo。陈默：中国男性，46岁，清瘦饱经风霜的脸，深陷疲惫的眼睛，花白寸头，短灰胡须与下巴山羊胡，右颊一道很浅的旧疤，深藏青色反光雨衣配银色安全条，炭灰色工作衬衫，脖子上用旧皮绳挂一把黄铜钥匙。必须与参考图完全同一张脸、同一套衣服。海州北站路口：凌晨四点，暴雨中的空旷六车道十字路口，1990年代混凝土人行天桥，生锈的信号控制塔，老北站立面与熄灭的霓虹，湿沥青长反光，钠灯橙光，一家只亮一盏暖灯的24小时粥铺，远处雾中的CBD天际线，无人群。陈默的脸部近景，雨水从颊上旧疤流下，他不眨眼，左脸是新机房的冷蓝光，右脸是旧信号灯的红光，深藏青反光雨衣，浅景深，克制。【重做硬性要求】整镜脸型锁定：鼻翼宽度与下颌线不得从第一秒到最后一秒逐渐变化。负面提示：多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "image_en": "cinematic film still, 16:9, 4K, shot on ARRI Alexa 35 with Cooke S4 lenses, shallow depth of field, natural film grain, subtle halation, rain-soaked Chinese coastal city at night, teal-blue shadows, sodium-amber practicals, one saturated signal-red accent, green only after the reboot, restrained neo-noir romantic drama, photorealistic skin texture, no text, no watermark, no logo. CHEN MO: Chinese man, 46, lean weathered face, deep-set tired eyes, short salt-and-pepper buzz cut, short gray mustache and goatee, a faint old scar on his right cheek, dark navy reflective raincoat with silver safety stripes, charcoal work shirt, a brass key on a worn leather cord around his neck. Match the reference image exactly: same face, same wardrobe. NORTH STATION JUNCTION, HAIZHOU: a vast empty six-lane intersection at 4 a.m. in heavy rain, 1990s concrete pedestrian overpass, rusty traffic-signal control tower, old north railway station facade with dead neon, wet asphalt with long reflections, sodium-orange streetlamps, a 24-hour congee stall with a single warm bulb, foggy CBD skyline in the distance, no crowds. close-up of Chen Mo's face, rain running down the faint old scar on his right cheek, unblinking, cold blue server-room light on the left side of his face, old signal red on the right, dark navy reflective raincoat, shallow depth of field, restrained. Face geometry locked for the whole shot: nose width and jawline must not gradually change from the first second to the last. NEGATIVE: extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "video_zh": "以已确认的关键帧为第一帧，全片保持同一张脸、同一套服装、同一场景与同一色调。固定近景，雨从脸上流下，他眨眼一次，红蓝光轻微变化，5秒。【重做硬性要求】整镜脸型锁定：鼻翼宽度与下颌线不得从第一秒到最后一秒逐渐变化。 结束状态：视线从远处移向柜体 负面提示：人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。",
+    "video_en": "Use the approved keyframe as the first frame. Keep the same face, wardrobe, location, lighting and color grade in every frame. static close-up, rain runs down his face, he blinks once, the red and blue light shifts slightly, 5 seconds. Face geometry locked for the whole shot: nose width and jawline must not gradually change from the first second to the last. End state: 视线从远处移向柜体 NEGATIVE: morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "negative_en": "extra fingers, deformed hands, distorted face, duplicate person, changing clothes, text, watermark, logo, cartoon, anime, oversaturated, plastic skin, heavy CGI rain, lens dirt, low resolution, fisheye, Dutch angle, two frontal faces in extreme close-up, face swap.",
+    "negative_zh": "多余手指，畸形手，脸部扭曲，人物重复，服装变化，文字，水印，logo，卡通，动漫，过饱和，塑料皮肤，过度CG雨，镜头污渍，低分辨率，鱼眼，荷兰角，双人正脸特写，换脸。",
+    "video_negative_en": "morphing, face drift, changing clothes, extra fingers, camera shake, text, watermark, stuttering slow motion, scene jump.",
+    "video_negative_zh": "人物变形，脸部漂移，服装变化，多余手指，镜头抖动，文字，水印，慢动作卡顿，场景跳变。"
+  },
+  "previs_motion": "real clip",
+  "spec": {
+    "resolution": "1920x1080",
+    "fps": 24,
+    "aspect": "16:9",
+    "no_generated_text": true,
+    "ai_badge_overlay": "assets/overlays/AI_badge.png"
+  }
+}
